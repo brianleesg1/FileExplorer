@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- Define your application beans here. They will be available to the
+       beans defined in your web-context because it is a sub-context.
+
+       Beans defined in the web-context will not be available in the
+       application context.
+    -->
+
+    <bean id="strongEncryptor" 	class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+        <property name="algorithm">
+            <!--note this algorithm must be in sync with the algorithm used to -->
+            <!--encrypt the password using encrypt command line -->
+            <value>PBEWithMD5AndTripleDES</value>
+        </property>
+    </bean>
+
+    <bean id="systemProperties" class="sg.com.ncs.common.SystemProperties" lazy-init="false" init-method="init">
+        <property name="encryptor" ref="strongEncryptor"/>
+    </bean>
+
+    <bean id="propertyConfigurer" class="sg.com.ncs.common.CustomPropertyPlaceholder" depends-on="systemProperties">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
+
+</beans>
