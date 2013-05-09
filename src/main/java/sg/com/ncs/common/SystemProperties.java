@@ -139,7 +139,7 @@ public class SystemProperties implements ApplicationContextAware {
 
     public void setEncryptor(StandardPBEStringEncryptor encryptor) {
         //log.info("setpassword");
-        encryptor.setPassword("erp2pass");
+        encryptor.setPassword("CrR3FqU9HdWB");
         SystemProperties.encryptor = encryptor;
     }
 }
