@@ -2,7 +2,6 @@ package sg.com.ncs.common;
 
 import org.apache.commons.vfs2.FileName;
 import org.apache.commons.vfs2.FileType;
-import sg.com.ncs.common.ResourcesUtil;
 
 
 public class Resource {

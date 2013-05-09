@@ -1,18 +1,12 @@
 package sg.com.ncs.common;
 
+import org.apache.commons.vfs2.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.commons.codec.binary.Base64;
-
-import org.apache.commons.vfs2.FileObject;
-import org.apache.commons.vfs2.FileSystemException;
-import org.apache.commons.vfs2.FileSystemManager;
-import org.apache.commons.vfs2.FileType;
-import org.apache.commons.vfs2.VFS;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ResourcesUtil {
 

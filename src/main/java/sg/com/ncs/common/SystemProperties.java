@@ -1,18 +1,16 @@
 package sg.com.ncs.common;
 
 
-import java.util.Properties;
-
-
 import org.jasypt.commons.CommonUtils;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.core.io.Resource;
+
+import java.util.Properties;
 
 public class SystemProperties implements ApplicationContextAware {
 
