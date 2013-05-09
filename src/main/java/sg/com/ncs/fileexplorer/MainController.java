@@ -5,6 +5,7 @@ import org.apache.commons.vfs2.FileObject;
 import org.apache.commons.vfs2.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,11 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sg.com.ncs.common.JSNode;
-import sg.com.ncs.common.Resource;
-import sg.com.ncs.common.ResourcesUtil;
-import sg.com.ncs.common.SystemProperties;
+import sg.com.ncs.common.*;
 
+import javax.activation.MimetypesFileTypeMap;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,6 +27,12 @@ import java.util.List;
 @Controller
 public class MainController {
     Logger log = LoggerFactory.getLogger(MainController.class);
+
+    @Autowired
+    LookUpTable<String,String> lookup = new LookUpTable<String,String>();
+
+    @Autowired
+    ServletContext context;
 
     @RequestMapping(value = "/init", method = RequestMethod.GET)
     public String init() {
@@ -45,12 +51,7 @@ public class MainController {
 
         if ("root".equalsIgnoreCase(id)) {
 
-
-            //JSNode root = new JSNode();
-            //root.setData("root");
-            //root.setID("root");
-            //root.opened();
-            //root.setAsDrive();
+            lookup.clear();
 
             String upload_file_root = SystemProperties.getProperty("UPLOAD_FILE_ROOT");
             log.info("upload_file_root = " + upload_file_root);
@@ -64,8 +65,11 @@ public class MainController {
         }
         else {
             log.info("id = " + id);
-            id = ResourcesUtil.decode(id);
-            log.info("decoded id = " + id);
+            //id = ResourcesUtil.decode(id);
+            //log.info("decoded id = " + id);
+
+            id = lookup.get(id);
+            log.info("lookup id = " + id);
 
             List<JSNode> nodes = getNodes(id);
             log.info("no of nodes = " + nodes.size());
@@ -77,24 +81,20 @@ public class MainController {
 
     }
 
-    @RequestMapping(value = "/downloadfile", method = RequestMethod.GET)
+    @RequestMapping(value = "/downloadfile", method = RequestMethod.GET, produces = "application/octet-stream")
     public @ResponseBody byte[] downloadfile(String filename, HttpServletResponse response) throws Exception {
         log.info("downloadfile -> " + filename);
 
-        String id = ResourcesUtil.decode(filename);
-        log.info("decoded file = " + id);
+        //String id = ResourcesUtil.decode(filename);
+        //log.info("decoded file = " + id);
+        String id = lookup.get(filename);
+        log.info("lookup id = " + id);
+
         FileObject fo = ResourcesUtil.getResourceAsFile(id);
-
-        //HttpHeaders responseHeaders = new HttpHeaders();
-        //responseHeaders.setContentType(MediaType.parseMediaType("application/octet-stream"));
-        //responseHeaders.setContentLength(fo.getContent().getSize());
-        //responseHeaders.set("Content-Disposition", "attachment");
-        //responseHeaders.add("Content-Disposition", "filename=\"" + fo.getName().getBaseName() + '\"');
-
         byte[] data = FileUtil.getContent(fo);
 
         response.setHeader("Content-Disposition", "attachment; filename=\"" + fo.getName().getBaseName() + "\"");
-        response.setContentType("application/octet-stream");
+        response.setHeader("Content-Transfer-Encoding", "binary");
         response.setContentLength(data.length);
         return data;
     }
@@ -138,6 +138,7 @@ public class MainController {
 
             }
 
+            lookup.add(res.getId(), res.getFullPathName());
             results.add(node);
         }
 

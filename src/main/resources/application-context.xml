@@ -15,6 +15,8 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
        application context.
     -->
 
+    <context:component-scan base-package="sg.com.ncs.common" />
+
     <bean id="strongEncryptor" 	class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
         <property name="algorithm">
             <!--note this algorithm must be in sync with the algorithm used to -->

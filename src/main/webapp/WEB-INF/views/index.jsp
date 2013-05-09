@@ -14,7 +14,7 @@
 
              var elemIF= document.getElementById("downloadIframeId");
 
-             if ( elemIF == null || elemIF == "undefinde" ){
+             if ( elemIF == null || typeof elemIF == "undefined" ){
              elemIF = document.createElement("iframe");
              elemIF.id="downloadIframeId";
              }
@@ -108,7 +108,7 @@
                 "contextmenu": {
                     "items": function ($node) {
 
-                        if ($node[0].attributes.rel.value === "folder" || $node[0].attributes.rel.value === "drive") {
+                        if ( typeof $node[0].attributes.rel != "undefined" && ($node[0].attributes.rel.value === "folder" || $node[0].attributes.rel.value === "drive")) {
                             return {
                                 "Refresh": {
                                     "label": "Refresh",

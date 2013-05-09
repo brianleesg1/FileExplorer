@@ -71,6 +71,7 @@ public class ResourcesUtil {
 
     }
 
+    /*
     public static String encode(String str) {
         byte[] encoded = Base64.encodeBase64URLSafe(str.getBytes());
         return new String(encoded);
@@ -81,4 +82,5 @@ public class ResourcesUtil {
 
         return new String(decoded);
     }
+    */
 }

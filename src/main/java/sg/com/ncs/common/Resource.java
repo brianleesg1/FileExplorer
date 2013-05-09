@@ -16,12 +16,16 @@ public class Resource {
         this.filename = filename;
         this.type = type;
 
-        this.id = ResourcesUtil.encode(filename.toString());
-
+        //this.id = ResourcesUtil.encode(filename.toString());
+        this.id = SystemUtil.getSystemId();
     }
 
     public String getName() {
         return filename.getBaseName();
+    }
+
+    public String getFullPathName() {
+        return filename.toString();
     }
 
     public FileType getType() {
