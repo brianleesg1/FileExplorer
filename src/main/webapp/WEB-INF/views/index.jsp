@@ -86,7 +86,12 @@
                                 "image" : "<%=request.getContextPath()%>/images/jstree/doc.png"
                             }
                         },
-
+                        "txt" : {
+                            "valid_children" : "none",
+                            "icon" : {
+                                "image" : "<%=request.getContextPath()%>/images/jstree/txt.png"
+                            }
+                        },
                         "folder" : {
                             "valid_children" : [ "default", "folder" ],
                             "icon" : {

@@ -15,6 +15,7 @@ public class JSNode {
     private static final String JPG = "jpg";
     private static final String PNG = "png";
     private static final String DOC = "doc";
+    private static final String TXT = "txt";
 
     private String data;
 
@@ -88,6 +89,9 @@ public class JSNode {
     }
     public void setAsDOC() {
         this.addAttribute("rel", DOC);
+    }
+    public void setAsTXT() {
+        this.addAttribute("rel", TXT);
     }
 
     public void setID(String id) {

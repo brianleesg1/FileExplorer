@@ -48,25 +48,29 @@ public class MainController {
 
             lookup.clear();
 
-            String upload_file_root = SystemProperties.getProperty("UPLOAD_FILE_ROOT");
-            log.info("upload_file_root = " + upload_file_root);
-            List<JSNode> nodes = getNodes(upload_file_root);
-            log.info("no of nodes = " + nodes.size());
-            list.addAll(nodes);
-            //root.addChildren(nodes);
+            String upload_file_staging_root = SystemProperties.getProperty("UPLOAD_FILE_STAGING_ROOT");
+            log.info("upload_file_staging_root = " + upload_file_staging_root);
+            List<JSNode> staging_nodes = getNodes(upload_file_staging_root,false);
+            log.info("no of nodes = " + staging_nodes.size());
+            list.addAll(staging_nodes);
 
-            //list.add(root);
+            String upload_file_tmp_root = SystemProperties.getProperty("UPLOAD_FILE_TMP_ROOT");
+            log.info("upload_file_tmp_root = " + upload_file_tmp_root);
+            List<JSNode> tmp_nodes = getNodes(upload_file_tmp_root,false);
+            log.info("no of nodes = " + tmp_nodes.size());
+            list.addAll(tmp_nodes);
 
+            String jboss_root = SystemProperties.getProperty("JBOSS_ROOT");
+            log.info("LOG_FILE_ROOT = " + jboss_root);
+            List<JSNode> log_nodes = getNodes(jboss_root,false);
+            log.info("no of nodes = " + log_nodes.size());
+            list.addAll(log_nodes);
         }
         else {
-            log.info("id = " + id);
-            //id = ResourcesUtil.decode(id);
-            //log.info("decoded id = " + id);
-
             id = lookup.get(id);
             log.info("lookup id = " + id);
 
-            List<JSNode> nodes = getNodes(id);
+            List<JSNode> nodes = getNodes(id,true);
             log.info("no of nodes = " + nodes.size());
 
             list.addAll(nodes);
@@ -94,8 +98,8 @@ public class MainController {
         return data;
     }
 
-    private List<JSNode> getNodes(String directory) throws Exception {
-        List<Resource> resources = ResourcesUtil.getResource(directory);
+    private List<JSNode> getNodes(String directory, boolean children_only) throws Exception {
+        List<Resource> resources = ResourcesUtil.getResource(directory,children_only);
         Iterator<Resource> it = resources.iterator();
 
         ArrayList<JSNode> results = new ArrayList<JSNode>();
@@ -123,6 +127,9 @@ public class MainController {
                     if (res.getExtension().equalsIgnoreCase("doc")) {
                         node.setAsDOC();
                     }
+                    if (res.getExtension().equalsIgnoreCase("txt")) {
+                        node.setAsTXT();
+                    }
                     //no have to set because JSNode default is FILE
                     node.opened();
                     break;
@@ -139,5 +146,7 @@ public class MainController {
 
         return results;
     }
+
+
 
 }

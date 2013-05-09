@@ -12,26 +12,34 @@ public class ResourcesUtil {
 
     protected static final Logger log = LoggerFactory.getLogger(ResourcesUtil.class);
 
-    public static List<Resource> getResource(String directory) throws FileSystemException {
+    public static List<Resource> getResource(String directory, boolean children_only) throws FileSystemException {
         log.info("getResource from -> " + directory);
 
         ArrayList<Resource> resources = new ArrayList<Resource>();
 
         FileSystemManager fsManager = VFS.getManager();
         FileObject fo = fsManager.resolveFile(directory);
-        if (fo.getType().compareTo(FileType.FOLDER) == 0) {
 
-            FileObject[] children = fo.getChildren();
+        if (!children_only) {
+            Resource resource = new Resource(fo.getName(), fo.getType());
+            resources.add(resource);
+        } else {
 
-            log.info("no of children = " + children.length);
-            for (int i=0; i<children.length; i++) {
-                FileObject child = children[i];
-                log.info("filename = " + child.getName() + " , type = " + child.getType().getName());
+            if (fo.getType().compareTo(FileType.FOLDER) == 0) {
 
-                Resource resource = new Resource(child.getName(), child.getType());
-                resources.add(resource);
+                FileObject[] children = fo.getChildren();
+
+                log.info("no of children = " + children.length);
+                for (int i=0; i<children.length; i++) {
+                    FileObject child = children[i];
+                    log.info("filename = " + child.getName() + " , type = " + child.getType().getName());
+
+                    Resource resource = new Resource(child.getName(), child.getType());
+                    resources.add(resource);
+                }
             }
         }
+
         return resources;
     }
 
