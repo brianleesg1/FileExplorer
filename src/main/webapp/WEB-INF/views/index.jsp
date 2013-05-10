@@ -10,6 +10,12 @@
 
     <script type="text/javascript">
 
+        function log(info) {
+            if (typeof console != "undefined") {
+                console.log(info);
+            }
+        }
+
         function downloadFile(id) {
 
              var elemIF= document.getElementById("downloadIframeId");
@@ -19,8 +25,8 @@
              elemIF.id="downloadIframeId";
              }
 
-            var url = '<%=request.getContextPath()%>/downloadfile?filename=' + id;
-            console.log("url = " + url);
+            var url = "<c:url value='/downloadfile?filename='/>" + id;
+            log("url = " + url);
 
 
              elemIF.src = url ;
@@ -32,7 +38,7 @@
         }
 
         $(document).ready(function(){
-            console.log("ready");
+            log("ready");
             $("#filebrowser").jstree({
                 "core" : { "animation" : 0 },
                 "json_data" : {
@@ -128,9 +134,9 @@
                                 "Download": {
                                     "label": "Download",
                                     "action": function (obj) {
-                                        console.log("download");
+                                        log("download");
                                         var id = obj[0].attributes.id.value;
-                                        console.log("id = " + id);
+                                        log("id = " + id);
                                         downloadFile(id);
                                     }
                                 }
