@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="sg.com.ncs.common.JSNode.FileTypes" %>
 
 <html>
 
@@ -71,49 +72,49 @@
                                 "image" : "<%=request.getContextPath()%>/images/jstree/file.png"
                             }
                         },
-                        "pdf" : {
+                        "<%=FileTypes.PDF%>" : {
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/pdf.png"
                             }
                         },
-                        "jpg" : {
+                        "<%=FileTypes.JPG%>" : {
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/jpg.png"
                             }
                         },
-                        "png" : {
+                        "<%=FileTypes.PNG%>" : {
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/png.png"
                             }
                         },
-                        "doc" : {
+                        "<%=FileTypes.DOC%>" : {
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/doc.png"
                             }
                         },
-                        "txt" : {
+                        "<%=FileTypes.TXT%>" : {
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/txt.png"
                             }
                         },
-                        "zip" : {
+                        "<%=FileTypes.ZIP%>" : {
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/zip.png"
                             }
                         },
-                        "folder" : {
+                        "<%=FileTypes.FOLDER%>" : {
                             "valid_children" : [ "default", "folder" ],
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/folder.png"
                             }
                         },
-                        "drive" : {
+                        "<%=FileTypes.DRIVE%>" : {
                             "valid_children" : [ "default", "folder" ],
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/root.png"
@@ -128,7 +129,7 @@
                 "contextmenu": {
                     "items": function ($node) {
 
-                        if ( typeof $node[0].attributes.rel != "undefined" && ($node[0].attributes.rel.value === "folder" || $node[0].attributes.rel.value === "drive")) {
+                        if ( typeof $node[0].attributes.rel != "undefined" && ($node[0].attributes.rel.value === "<%=FileTypes.FOLDER%>" || $node[0].attributes.rel.value === "<%=FileTypes.DRIVE%>")) {
                             return {
                                 "Refresh": {
                                     "label": "Refresh",

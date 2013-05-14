@@ -111,29 +111,12 @@ public class MainController {
             node.setID(res.getId());
             switch (res.getType()) {
                 case FOLDER : {
-                    node.setAsFolder();
+                    node.setFileType(JSNode.FileTypes.FOLDER.name());
                     node.closed();
                     break;
                 }
                 case FILE : {
-                    if (res.getExtension().equalsIgnoreCase("pdf")) {
-                        node.setAsPDF();
-                    }
-                    if (res.getExtension().equalsIgnoreCase("jpg")) {
-                        node.setAsJPG();
-                    }
-                    if (res.getExtension().equalsIgnoreCase("png")) {
-                        node.setAsPNG();
-                    }
-                    if (res.getExtension().equalsIgnoreCase("doc")) {
-                        node.setAsDOC();
-                    }
-                    if (res.getExtension().equalsIgnoreCase("txt")) {
-                        node.setAsTXT();
-                    }
-                    if (res.getExtension().equalsIgnoreCase("zip")) {
-                        node.setAsZip();
-                    }
+                    node.setFileType(res.getExtension());
                     //no have to set because JSNode default is FILE
                     node.opened();
                     break;
