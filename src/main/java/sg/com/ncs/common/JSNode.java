@@ -16,6 +16,7 @@ public class JSNode {
     private static final String PNG = "png";
     private static final String DOC = "doc";
     private static final String TXT = "txt";
+    private static final String ZIP = "zip";
 
     private String data;
 
@@ -96,5 +97,9 @@ public class JSNode {
 
     public void setID(String id) {
         this.addAttribute("id", id);
+    }
+
+    public void setAsZip() {
+        this.addAttribute("rel",ZIP);
     }
 }

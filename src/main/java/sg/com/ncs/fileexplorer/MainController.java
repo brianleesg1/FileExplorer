@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import sg.com.ncs.common.*;
 
@@ -38,7 +39,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/fetch", method = RequestMethod.GET)
-    public @ResponseBody List<JSNode> fetch(String operation, String id) throws Exception {
+    public @ResponseBody List<JSNode> fetch(@RequestParam("operation") String operation, @RequestParam("id") String id) throws Exception {
         log.info("operation = " + operation);
         log.info("id = " + id);
 
@@ -129,6 +130,9 @@ public class MainController {
                     }
                     if (res.getExtension().equalsIgnoreCase("txt")) {
                         node.setAsTXT();
+                    }
+                    if (res.getExtension().equalsIgnoreCase("zip")) {
+                        node.setAsZip();
                     }
                     //no have to set because JSNode default is FILE
                     node.opened();

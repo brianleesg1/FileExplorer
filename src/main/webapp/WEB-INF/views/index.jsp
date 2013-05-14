@@ -51,6 +51,9 @@
                                 //"id" : n.attr ? n.attr("id") : "root"
                                 "id" : n.attr ? n.attr("id") : "root"
                             };
+                        },
+                        "error": function (jqXHR, textStatus, errorThrown) {
+                            alert("There was an error while loading data for this tree " + jqXHR.responseText);
                         }
                     },
                     progressive_unload : true
@@ -96,6 +99,12 @@
                             "valid_children" : "none",
                             "icon" : {
                                 "image" : "<%=request.getContextPath()%>/images/jstree/txt.png"
+                            }
+                        },
+                        "zip" : {
+                            "valid_children" : "none",
+                            "icon" : {
+                                "image" : "<%=request.getContextPath()%>/images/jstree/zip.png"
                             }
                         },
                         "folder" : {
