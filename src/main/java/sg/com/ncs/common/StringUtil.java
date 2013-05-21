@@ -24,7 +24,7 @@ import java.util.*;
  *
  */
 public class StringUtil {
-    static Logger logger = LoggerFactory.getLogger(SystemProperties.class);
+    static Logger logger = LoggerFactory.getLogger(StringUtil.class);
 
     /**
      * Returns a string which is filled with a specified string. <br>

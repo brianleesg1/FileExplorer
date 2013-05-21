@@ -1,0 +1,38 @@
+
+.fileupload_remove_button {
+    background: url('delete.gif') no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+
+tr {
+    height: 2em;
+}
+
+fieldset {
+    border-color: #EEE;
+    width: 80%;
+}
+
+fieldset legend {
+    font-weight:bold;
+    font-size: 1em;
+}
+.fileselect {
+    width : 5%;
+    display : inline-block;
+}
+
+.filename {
+    width : 60%;
+    display : inline-block;
+}
+
+.filestatus {
+    display : inline-block;
+}
+
+.fileerror {
+    color : red;
+}

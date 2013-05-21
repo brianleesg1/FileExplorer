@@ -9,6 +9,18 @@
     <script type="text/javascript" src="<%=request.getContextPath()%>/scripts/jquery/js/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/scripts/jstree-v.pre1.0/jquery.jstree.js"></script>
 
+    <!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+    <script type="text/javascript" src="<%=request.getContextPath()%>/scripts/plupload/plupload.full.js"></script>
+
+    <!-- need to define flash_swf_url and silverlight_xap to be used by fileupload.js-->
+    <script>
+        var flash_swf_url = '<%=request.getContextPath()%>/scripts/plupload/plupload.flash.swf';
+        var silverlight_xap_url = '<%=request.getContextPath()%>/scripts/plupload/plupload.silverlight.xap';
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/scripts/fileupload/fileupload.css"/>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/scripts/fileupload/fileupload.js"></script>
+
     <script type="text/javascript">
 
         function log(info) {
@@ -159,6 +171,15 @@
 
             });
 
+            var uploader = new vitas.fileupload( {
+                flash_swf_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.flash.swf',
+                silverlight_xap_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.silverlight.xap',
+                upload_url : '<%=request.getContextPath()%>/deploy'
+            });
+
+            uploader.initContainer("ApplicationDeployment", [ { extensions : "war, ear" } ]);
+
+
         });
 
     </script>
@@ -167,6 +188,36 @@
 <body>
     <h2>File Explorer</h2>
     <div id="filebrowser">
+    </div>
+
+    <hr/>
+
+    <h2>Deploy</h2>
+    <div id="ApplicationDeployment">
+        <table width="100%">
+            <tr>
+                <td colspan="2" style="text-align: right" ><span class="currentRuntime"/></td>
+            </tr>
+            <tr>
+                <td width="20%">WAR/EAR file: <span class='asterisk'>*</span> :</td>
+                <td width="80%">
+                    <fieldset>
+                        <legend>File you have chosen</legend>
+                            <div class="filelist"></div>
+                  </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a class="pickfiles" href="#">[Select files]</a>
+
+                    <a class="uploadfiles" href="#">[Upload files]</a>
+
+                    <a class="deletefiles" href="#">[Delete files]</a>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </body>

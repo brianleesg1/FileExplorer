@@ -1,20 +1,26 @@
 package sg.com.ncs.fileexplorer;
 
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.vfs2.FileObject;
 import org.apache.commons.vfs2.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import sg.com.ncs.common.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -70,6 +76,12 @@ public class MainController {
         else {
             id = lookup.get(id);
             log.info("lookup id = " + id);
+
+            if (StringUtil.isNullOrEmpty(id)) {
+                String errmsg = "if id is null, this means that the application may have been restarted, need to close/reopen browser again.";
+                log.error(errmsg);
+                throw new Exception(errmsg);
+            }
 
             List<JSNode> nodes = getNodes(id,true);
             log.info("no of nodes = " + nodes.size());
@@ -134,6 +146,81 @@ public class MainController {
         return results;
     }
 
+    @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = "application/json")
+    public @ResponseBody UploadStatus uploadFile(UploadItem uploadItem, BindingResult result) {
+
+        log.info("uploadFile");
 
 
+        if (result.hasErrors()) {
+            StringBuilder errors = new StringBuilder();
+            for (ObjectError error : result.getAllErrors()) {
+                errors.append("Error: ").append(error.getCode()).append(" - ").append(error.getDefaultMessage()).append("\n");
+
+            }
+            log.error(errors.toString());
+            //throw new RuntimeException("Error in uploadFile");
+            return new UploadStatus("failure", errors.toString());
+        }
+
+        uploadItem.printFileInfo();
+        MultipartFile file = uploadItem.getFile();
+        return new UploadStatus("successful","");
+
+    }
+
+    @RequestMapping(value = "/deploy", method = RequestMethod.POST, produces = "application/json")
+    public @ResponseBody UploadStatus deploy(UploadItem uploadItem, BindingResult result) {
+
+        try {
+            uploadItem.printFileInfo();
+            File tmpFile = copyToTmpFolder(uploadItem.getFile());
+            //moveToDeploymentFolder(tmpFile);
+
+            return new UploadStatus("successful","");
+        } catch (Exception e) {
+            e.printStackTrace();;
+            return new UploadStatus("failure","fail to deploy");
+        }
+    }
+
+    private File copyToTmpFolder(MultipartFile file) throws IOException {
+        log.info("copyToTmpFolder");
+
+
+        String destFile = SystemProperties.getProperty("DEPLOYMENT_TMP_FOLDER" + file.getOriginalFilename());
+        File dest = new File(destFile);
+        file.transferTo(dest);
+
+        return dest;
+
+        /*
+        String destTmpFolder = SystemProperties.getProperty("DEPLOYMENT_TMP_FOLDER") + File.separator + SystemUtil.getSystemId();
+        File tmpFolder = new File(destTmpFolder);
+        tmpFolder.mkdir();
+
+        String dest = destTmpFolder + File.separator + file.getOriginalFilename();
+        log.info("dest -> " + dest);
+
+        File f = new File(dest);
+        file.transferTo(f);
+        return f;
+        */
+
+
+    }
+
+    private void moveToDeploymentFolder(File sourceFile) throws IOException {
+        log.info("moveToDeploymentFolder");
+
+        String destTmpFolder = SystemProperties.getProperty("DEPLOYMENT_FOLDER");
+        //String destTmpFilename = SystemUtil.getSystemId() + "." + sourceFile.getName();
+        String dest = destTmpFolder + File.separator + sourceFile.getName();;
+        log.info("dest -> " + dest);
+
+        File destFile = new File(dest);
+
+        FileUtils.copyFile(sourceFile, destFile,true);
+
+    }
 }
