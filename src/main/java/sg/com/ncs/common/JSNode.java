@@ -109,7 +109,7 @@ public class JSNode {
                     }
                 }
             } catch (IllegalArgumentException iae) {
-                log.info("no FileType constant for " + filetype);
+                //log.info("no FileType constant for " + filetype);
             }
         }
 

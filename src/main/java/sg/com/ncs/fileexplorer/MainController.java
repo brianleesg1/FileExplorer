@@ -9,16 +9,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.DataBinder;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 import sg.com.ncs.common.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -37,11 +37,13 @@ public class MainController {
     ServletContext context;
 
     @RequestMapping(value = "/init", method = RequestMethod.GET)
-    public String init() {
+    public ModelAndView  init() {
         log.info("MainController home..");
 
+        ModelAndView model = new ModelAndView("index");
+        model.addObject("max_file_upload_size", Integer.parseInt(SystemProperties.getProperty("MAX_UPLOAD_FILE_SIZE"))/1024/1024);
 
-        return "index";
+        return model;
     }
 
     @RequestMapping(value = "/fetch", method = RequestMethod.GET)
@@ -147,7 +149,7 @@ public class MainController {
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = "application/json")
-    public @ResponseBody UploadStatus uploadFile(UploadItem uploadItem, BindingResult result) {
+    public @ResponseBody UploadStatus uploadFile(@Valid UploadItem uploadItem, BindingResult result) {
 
         log.info("uploadFile");
 
@@ -155,7 +157,7 @@ public class MainController {
         if (result.hasErrors()) {
             StringBuilder errors = new StringBuilder();
             for (ObjectError error : result.getAllErrors()) {
-                errors.append("Error: ").append(error.getCode()).append(" - ").append(error.getDefaultMessage()).append("\n");
+                errors.append(error.getCode()).append(" - ").append(error.getDefaultMessage()).append("\n");
 
             }
             log.error(errors.toString());
@@ -170,7 +172,18 @@ public class MainController {
     }
 
     @RequestMapping(value = "/deploy", method = RequestMethod.POST, produces = "application/json")
-    public @ResponseBody UploadStatus deploy(UploadItem uploadItem, BindingResult result) {
+    public @ResponseBody UploadStatus deploy(@Valid UploadItem uploadItem, BindingResult result) {
+
+        if (result.hasErrors()) {
+            StringBuilder errors = new StringBuilder();
+            for (ObjectError error : result.getAllErrors()) {
+                errors.append(error.getCode()).append(" - ").append(error.getDefaultMessage()).append("\n");
+
+            }
+            log.error(errors.toString());
+            //throw new RuntimeException("Error in uploadFile");
+            return new UploadStatus("failure", errors.toString());
+        }
 
         try {
             uploadItem.printFileInfo();
@@ -188,7 +201,8 @@ public class MainController {
         log.info("copyToTmpFolder");
 
 
-        String destFile = SystemProperties.getProperty("DEPLOYMENT_TMP_FOLDER" + file.getOriginalFilename());
+        String destFile = SystemProperties.getProperty("DEPLOYMENT_TMP_FOLDER") + File.separator + file.getOriginalFilename();
+        log.info("destFile = " + destFile);
         File dest = new File(destFile);
         file.transferTo(dest);
 
@@ -222,5 +236,10 @@ public class MainController {
 
         FileUtils.copyFile(sourceFile, destFile,true);
 
+    }
+
+    @InitBinder
+    public void initBinder(final DataBinder binder) {
+        binder.setValidator(new UploadValidator());
     }
 }

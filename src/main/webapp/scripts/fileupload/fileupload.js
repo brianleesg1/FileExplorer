@@ -8,6 +8,13 @@ vitas.fileupload = function(options) {
     if (typeof options.callback != "undefined") {
         this.callback = options.callback;
     }
+    if (typeof options.max_file_size != "undefined") {
+        this.max_file_size = options.max_file_size;
+    }
+    else {
+        this.max_file_size = 50;//default
+
+    }
 }
 
 vitas.fileupload.prototype.callback = function(msg) {
@@ -32,7 +39,7 @@ vitas.fileupload.prototype.initContainer = function (containername, filters) {
         runtimes : 'gears,html5,flash,silverlight,browserplus',
         browse_button : pickfiles_id,
         container : containername,
-        max_file_size : '10mb',
+        max_file_size : this.max_file_size + 'mb',
         url : this.upload_url,
         flash_swf_url : this.flash_swf_url,
         silverlight_xap_url : this.silverlight_xap_url,
@@ -85,8 +92,15 @@ vitas.fileupload.prototype.initContainer = function (containername, filters) {
             err.message = 'Internal Server Error';
         }
 
-        $('#'+err.file.id + ' .filestatus').addClass('fileerror').html("Error: " + err.status + " - " + err.message);
-        $('#' + file.id + " .fileselect :checkbox").attr('disabled', 'disabled');
+        if ($('#'+err.file.id).length == 0) {
+            //this case occurs if the file is not previously added to the filelist.
+            $('#'+containername + ' .filelist').append("<div><span class='fileselect'></span> <label class='filename'>" + err.file.name + " (" + plupload.formatSize(err.file.size) + ")</label>" + "<label class='fileerror'>" + err.message + "</label></div>");
+        }
+        else {
+            //this case occurs if the file is in the filelist but rejected by server.
+            $('#'+err.file.id + ' .filestatus').addClass('fileerror').html("Error: " + err.status + " - " + err.message);
+            $('#' + err.file.id + " .fileselect :checkbox").attr('disabled', 'disabled');
+        }
 
         up.refresh(); // Reposition Flash/Silverlight
         uploadcontainer.callback(err.message);
@@ -117,8 +131,8 @@ vitas.fileupload.prototype.initContainer = function (containername, filters) {
 
             }
             else {
-                $('#' + file.id + " .filestatus").addClass('fileerror').html("100% - Failed, " + result.status + ".");
-                uploadcontainer.callback(result.status);
+                $('#' + file.id + " .filestatus").addClass('fileerror').html("100% - Failed, " + result.reason + ".");
+                uploadcontainer.callback(result.reason);
 
             }
         } else {

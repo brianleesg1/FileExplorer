@@ -38,7 +38,7 @@
              elemIF.id="downloadIframeId";
              }
 
-            var url = "<c:url value='/downloadfile?filename='/>" + id;
+            var url = "<%=request.getContextPath()%>/downloadfile?filename=" + id;
             log("url = " + url);
 
 
@@ -171,13 +171,16 @@
 
             });
 
+            var max_file_upload_size = ${max_file_upload_size};
+
             var uploader = new vitas.fileupload( {
                 flash_swf_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.flash.swf',
                 silverlight_xap_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.silverlight.xap',
-                upload_url : '<%=request.getContextPath()%>/deploy'
+                upload_url : '<%=request.getContextPath()%>/deploy',
+                max_file_upload_size : max_file_upload_size
             });
 
-            uploader.initContainer("ApplicationDeployment", [ { extensions : "war, ear" } ]);
+            uploader.initContainer("ApplicationDeployment", [ { extensions : "war,ear" } ]);
 
 
         });
