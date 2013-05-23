@@ -29,10 +29,10 @@ public class ResourcesUtil {
 
                 FileObject[] children = fo.getChildren();
 
-                log.info("no of children = " + children.length);
+                log.error("no of children = " + children.length);
                 for (int i=0; i<children.length; i++) {
                     FileObject child = children[i];
-                    log.info("filename = " + child.getName() + " , type = " + child.getType().getName());
+                    log.error("filename = " + child.getName() + " , type = " + child.getType().getName());
 
                     Resource resource = new Resource(child.getName(), child.getType());
                     resources.add(resource);

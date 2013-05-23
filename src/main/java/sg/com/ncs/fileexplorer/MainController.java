@@ -74,6 +74,12 @@ public class MainController {
             List<JSNode> log_nodes = getNodes(jboss_root,false);
             log.info("no of nodes = " + log_nodes.size());
             list.addAll(log_nodes);
+
+            String deployment_tmp_root = SystemProperties.getProperty("DEPLOYMENT_TMP_FOLDER");
+            log.info("DEPLOYMENT_TMP_ROOT = " + deployment_tmp_root);
+            List<JSNode> depl_tmp_nodes = getNodes(deployment_tmp_root,false);
+            log.info("no of nodes = " + depl_tmp_nodes.size());
+            list.addAll(depl_tmp_nodes);
         }
         else {
             id = lookup.get(id);

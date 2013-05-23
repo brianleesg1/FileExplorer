@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="/WEB-INF/acl-taglib.tld" prefix="acl"%>
 <%@ page import="sg.com.ncs.common.JSNode.FileTypes" %>
 
 <html>
@@ -38,7 +39,8 @@
              elemIF.id="downloadIframeId";
              }
 
-            var url = "<%=request.getContextPath()%>/downloadfile?filename=" + id;
+            //commend
+            var url = "<acl:junction/><%=request.getContextPath()%>/downloadfile?filename=" + id;
             log("url = " + url);
 
 
@@ -189,7 +191,7 @@
 </head>
 
 <body>
-    <h2>File Explorer</h2>
+    <h2>File Explorer (If you encounter error while expanding the folders, try to refresh the page again.)</h2>
     <div id="filebrowser">
     </div>
 

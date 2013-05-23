@@ -8,11 +8,11 @@ vitas.fileupload = function(options) {
     if (typeof options.callback != "undefined") {
         this.callback = options.callback;
     }
-    if (typeof options.max_file_size != "undefined") {
-        this.max_file_size = options.max_file_size;
+    if (typeof options.max_file_upload_size != "undefined") {
+        this.max_file_upload_size = options.max_file_upload_size;
     }
     else {
-        this.max_file_size = 50;//default
+        this.max_file_upload_size = 50;//default
 
     }
 }
@@ -39,7 +39,7 @@ vitas.fileupload.prototype.initContainer = function (containername, filters) {
         runtimes : 'gears,html5,flash,silverlight,browserplus',
         browse_button : pickfiles_id,
         container : containername,
-        max_file_size : this.max_file_size + 'mb',
+        max_file_size : this.max_file_upload_size + 'mb',
         url : this.upload_url,
         flash_swf_url : this.flash_swf_url,
         silverlight_xap_url : this.silverlight_xap_url,
