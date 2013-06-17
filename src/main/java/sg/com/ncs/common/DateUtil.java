@@ -25,7 +25,10 @@ package sg.com.ncs.common;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.ParsePosition;
@@ -48,6 +51,10 @@ import java.util.TimeZone;
  * @class DateUtil
  * @since 12/12/2002
  */
+
+@Component
+@ManagedBean
+@ApplicationScoped
 public class DateUtil
 {
     /** A log instance for this class */
@@ -110,6 +117,14 @@ public class DateUtil
     public final static String DATETIME_FORMAT_B = "dd/MM/yyyy HH:mm:ss.SSS";
     //Added by Daniel Han June 03 2010
     public final static String DATETIME_FORMAT_C = "yyyy,MM,dd,HH,mm";
+
+    /* EL constants */
+    Date currentDate = getSystemDate();
+
+
+    public Date getCurrentDate() {
+        return currentDate;
+    }
 
     /**
      * Returns a date object from input string indicating year, month and day

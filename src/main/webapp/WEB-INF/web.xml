@@ -10,13 +10,57 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            classpath:application-context.xml
+            classpath:application-context.xml,
+            classpath:application-security.xml
         </param-value>
     </context-param>
+
+    <!-- JSP tags in the html commend tag will not be included -->
+    <context-param>
+        <param-name>facelets.SKIP_COMMENTS</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>aristo</param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>noCacheFilter</filter-name>
+        <filter-class>sg.com.ncs.filters.NoCacheFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>noCacheFilter</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
 
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+    <listener>
+        <listener-class>
+            org.springframework.security.web.session.HttpSessionEventPublisher
+        </listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
 
     <servlet>
         <servlet-name>fileexplorer</servlet-name>
@@ -33,6 +77,16 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+       <servlet-name>Faces Servlet</servlet-name>
+       <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+
+    <error-page>
+        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+        <location>/pages/common/login.xhtml</location>
+    </error-page>
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
         <location>/WEB-INF/views/error.jsp</location>

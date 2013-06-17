@@ -184,6 +184,14 @@
 
             uploader.initContainer("ApplicationDeployment", [ { extensions : "war,ear" } ]);
 
+            var uploadtest = new vitas.fileupload( {
+                flash_swf_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.flash.swf',
+                silverlight_xap_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.silverlight.xap',
+                upload_url : '<%=request.getContextPath()%>/upload',
+                max_file_upload_size : max_file_upload_size
+            });
+
+            uploadtest.initContainer("uploadtest");
 
         });
 
@@ -191,8 +199,39 @@
 </head>
 
 <body>
+
     <h2>File Explorer (If you encounter error while expanding the folders, try to refresh the page again.)</h2>
     <div id="filebrowser">
+    </div>
+
+    <hr/>
+
+    <h2>Upload Test</h2>
+    <div id="uploadtest">
+        <table width="100%">
+            <tr>
+                <td colspan="2" style="text-align: right" ><span class="currentRuntime"/></td>
+            </tr>
+            <tr>
+                <td width="20%">Upload file: <span class='asterisk'>*</span> :</td>
+                <td width="80%">
+                    <fieldset>
+                        <legend>File you have chosen</legend>
+                        <div class="filelist"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a class="pickfiles" href="#">[Select files]</a>
+
+                    <a class="uploadfiles" href="#">[Upload files]</a>
+
+                    <a class="deletefiles" href="#">[Delete files]</a>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <hr/>

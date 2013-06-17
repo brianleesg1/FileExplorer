@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<body>
+<ui:composition>
+
+    <h1>This is default content</h1>
+    <!--
+    <f:view>
+        <h:form id="contentForm" prependId="false">
+        <h:messages />
+        <h:panelGrid columns="2">
+            <h:outputLabel id="dateLabel" for="contentdate" value="Date: " />
+            <h:inputText id="contentdate" value="#{contentBean.date}">
+                <f:convertDateTime pattern="#{constants.date_pattern}" />
+            </h:inputText>
+            <h:commandButton type="submit" id="login" action="#{contentBean.submit}" value="Submit" />
+        </h:panelGrid>
+        </h:form>
+    </f:view>
+    -->
+
+    <f:view>
+
+        <h:form id="contentForm">
+        <h:outputLabel id="valueDateLabel" for="valueDate" value="Value Date :"/>
+        <h:inputText id="valueDate" value="#{contentBean.valueDate}">
+            <f:convertDateTime pattern="#{constants.date_pattern}" />
+        </h:inputText>
+
+        <h:panelGrid columns="11">
+            <h:outputLabel id="selectLabel" for="select" value=""/>
+            <h:outputLabel id="bankCdLabel" for="bankCd" value="Bank&#xa;Code" styleClass="preformatted"/>
+            <h:outputLabel id="branchCdLabel" for="branchCd" value="Branch&#xa;Cd" styleClass="preformatted"/>
+            <h:outputLabel id="acctNumLabel" for="acctNum" value="Account Num" styleClass="preformatted"/>
+            <h:outputLabel id="payMthdNumLabel" for="payMthdNum" value="Payment Method Num" styleClass="preformatted"/>
+            <h:outputLabel id="amtInCentLabel" for="amtInCent" value="Amount&#xa;(in cent)" styleClass="preformatted"/>
+            <h:outputLabel id="particularLabel" for="particular" value="Particular" styleClass="preformatted"/>
+            <h:outputLabel id="custRefNumLabel" for="custRefNum" value="Cust Ref Num" styleClass="preformatted"/>
+            <h:outputLabel id="successIndLabel" for="successInd" value="Success Ind" styleClass="preformatted"/>
+            <h:outputLabel id="reasonCdLabel" for="reasonCd" value="Reason Cd" styleClass="preformatted"/>
+            <h:outputLabel id="otherReasonLabel" for="otherReason" value="Other Reason" styleClass="preformatted"/>
+
+            <h:selectBooleanCheckbox id="select" value="#{contentBean.selected}" />
+            <h:inputText id="bankCd" value="#{contentBean.bank_code}" size="4" />
+            <h:inputText id="branchCd" value="#{contentBean.branch_code}" size="3" />
+            <h:inputText id="acctNum" value="#{contentBean.acct_num}" size="11"/>
+            <h:inputText id="payMthdNum" value="#{contentBean.pay_mthd_num}" size="20"/>
+            <h:inputText id="amtInCent" value="#{contentBean.amount}" size="11"/>
+            <h:inputText id="particular" value="#{contentBean.particular}" size="12" />
+            <h:inputText id="custRefNum" value="#{contentBean.custRefNum}" size="12"/>
+            <h:selectOneMenu id="successInd" value="#{contentBean.successInd}">
+                <f:selectItem itemValue="0" itemLabel="0" />
+                <f:selectItem itemValue="1" itemLabel="1" />
+            </h:selectOneMenu>
+            <h:selectOneMenu id="reasonCd" value="#{contentBean.reasonCd}">
+                <f:selectItem itemValue="10" itemLabel="10 - INVALID RECV ACCOUNT NUMBER" />
+                <f:selectItem itemValue="20" itemLabel="20 - ERROR IN REEV BANK CODE" />
+                <f:selectItem itemValue="21" itemLabel="21 - ERROR IN RECV BR CODE" />
+                <f:selectItem itemValue="30" itemLabel="30 - AMT EXCEEDED" />
+                <f:selectItem itemValue="31" itemLabel="31 - ERROR IN AMOUNT" />
+                <f:selectItem itemValue="40" itemLabel="40 - NO DDA" />
+                <f:selectItem itemValue="41" itemLabel="41 - DDA TERMINATED" />
+                <f:selectItem itemValue="42" itemLabel="42 - INV ORIG A/C NO" />
+                <f:selectItem itemValue="43" itemLabel="43 - ERROR IN ORIG BANK CODE" />
+                <f:selectItem itemValue="44" itemLabel="44 - NON-ORIG BANK CODE" />
+                <f:selectItem itemValue="45" itemLabel="45 - ERROR IN ORIG BRANCH CODE" />
+                <f:selectItem itemValue="46" itemLabel="46 - UNMATCHED REF NO" />
+                <f:selectItem itemValue="46" itemLabel="47 - REF NO MISSING" />
+                <f:selectItem itemValue="46" itemLabel="50 - REFER PAYING PARTY" />
+                <f:selectItem itemValue="46" itemLabel="51 - EFFECTS NOT CLEARED" />
+                <f:selectItem itemValue="46" itemLabel="60 - ACCOUNT CLOSED" />
+                <f:selectItem itemValue="46" itemLabel="61 - ACCOUNT DOES NOT EXIST" />
+                <f:selectItem itemValue="90" itemLabel="90 - ANY OTHER REASONS" />
+            </h:selectOneMenu>
+            <h:inputText id="otherReason" value="#{contentBean.otherReason}" size="15"/>
+
+        </h:panelGrid>
+        </h:form>
+    </f:view>
+</ui:composition>
+</body>
+</html>

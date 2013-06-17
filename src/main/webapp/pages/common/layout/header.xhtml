@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<body>
+<ui:composition>
+
+<table style="width: 100%">
+    <tr>
+        <td></td>
+        <td style="text-align: right"> <h:outputLabel value="#{userSessionInfo.username}"/> </td>
+    </tr>
+
+</table>
+
+<!--
+<p:toolbar>
+<p:toolbarGroup align="left">
+
+    <p:menubar style="border: 0px">
+        <p:submenu label="Menu1">
+            <p:menuitem value="item1" url="#"/>
+            <p:menuitem value="item2" url="#"/>
+        </p:submenu>
+
+        <p:submenu label="Menu2">
+            <p:menuitem value="item1" url="#"/>
+            <p:menuitem value="item2" url="#"/>
+        </p:submenu>
+    </p:menubar>
+
+
+</p:toolbarGroup>
+
+<p:toolbarGroup align="right">
+
+    <h:form id="logoutForm">
+    <p:menubar style="border: 0px">
+
+        <p:menuitem ajax="false" actionListener="#{logoutBean.logoutAction}" value="Logout" icon="ui-icon-close"/>
+    </p:menubar>
+</h:form>
+
+</p:toolbarGroup>
+
+
+</p:toolbar>
+ -->
+<h:form>
+<p:menubar model="#{menuBean.menu}"/>
+</h:form>
+
+</ui:composition>
+</body>
+</html>

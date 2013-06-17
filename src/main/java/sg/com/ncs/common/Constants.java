@@ -1,5 +1,11 @@
 package sg.com.ncs.common;
 
+import org.springframework.stereotype.Component;
+
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: brian
@@ -7,6 +13,9 @@ package sg.com.ncs.common;
  * Time: 1:49 PM
  * To change this template use File | Settings | File Templates.
  */
+@Component
+@ManagedBean
+@ApplicationScoped
 public class Constants {
 
     public static final String EMPTY_STR = "";
@@ -25,4 +34,18 @@ public class Constants {
     public static final String INACTIVE = "I";
 
     public static final String APPBASE_APP_ENV = "VITAS_APP_ENV";
+    public static final String DATE_PATTERN = "dd-MM-yyyy";
+
+    /* EL constants */
+    String date_pattern = DATE_PATTERN;
+
+    public String getDate_pattern() {
+        System.out.println("getDate_pattern : " + date_pattern);
+        return date_pattern;
+    }
+
+    public void setDate_pattern(String date_pattern) {
+        this.date_pattern = date_pattern;
+    }
+
 }

@@ -1,0 +1,12 @@
+.preformatted {
+    white-space: pre;
+}
+
+.ui-widget, .ui-widget .ui-widget   {
+    font-size: 90% !important;
+}
+
+
+
+
+

@@ -21,28 +21,30 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 
 @Controller
+@RequestMapping(value="/rs")
 public class MainController {
     Logger log = LoggerFactory.getLogger(MainController.class);
 
-    @Autowired
     LookUpTable<String,String> lookup = new LookUpTable<String,String>();
 
     @Autowired
     ServletContext context;
 
     @RequestMapping(value = "/init", method = RequestMethod.GET)
-    public ModelAndView  init() {
+    public ModelAndView  init(String test) throws Exception {
         log.info("MainController home..");
 
         ModelAndView model = new ModelAndView("index");
         model.addObject("max_file_upload_size", Integer.parseInt(SystemProperties.getProperty("MAX_UPLOAD_FILE_SIZE"))/1024/1024);
 
+        log.info(test);
         return model;
     }
 

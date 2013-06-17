@@ -151,4 +151,8 @@ common.log = function log(msg) {
     if (typeof console != "undefined") {
         console.log(msg);
     }
+    else if (window.console && 'function' === typeof window.console.log) { //for IE
+        window.console.log(msg);
+    }
+
 }
