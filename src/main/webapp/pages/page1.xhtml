@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/pages/common/layout/commonLayout.xhtml">
+
+    <ui:define name="content">
+        <p:panel id="contenPanel">
+
+    <div>
+        This is page 1
+    </div>
+
+    <!--
+    <h:form>
+        <p:commandButton value="Ajax Submit"
+                         update="display"
+                         action="#{menuBean.page2}"/>
+
+
+        <p:panel id="display" >
+            <ui:include src="#{menuBean.page2}"/>
+        </p:panel>
+    </h:form>
+     -->
+
+        </p:panel>
+    </ui:define>
+</ui:composition>
+</h:body>
+</html>
