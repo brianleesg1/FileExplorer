@@ -6,9 +6,35 @@
 <h:head><title>Logout</title></h:head>
 
 <h:body>
+
+    <h:outputScript library="primefaces" name="jquery/jquery.js" />
+
+    <script>
+        $(document).ready(function () {
+            function centerThis(div) {
+                var winH = $(window).innerHeight();
+                var winW = $(window).innerWidth();
+                var centerDiv = $('#' + div);
+                centerDiv.css('position','absolute')
+                centerDiv.css('top', winH/2-centerDiv.height()/2);
+                centerDiv.css('left', winW/2-centerDiv.width()/2);
+            }
+            console.log("ready");
+            centerThis('logoutPanel');
+
+        });
+    </script>
+
+    <div style="width:100%;height:100%">
+    <div id="logoutPanel">
+    <p:panel>
     Logged Out succesfully
     <br/>
     Click <h:link value="here" outcome="/pages/common/login.xhtml" /> to login again.
+    </p:panel>
+
+    </div>
+    </div>
 </h:body>
 
 </html>

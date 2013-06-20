@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+<ui:composition template="/pages/common/layout/commonLayout.xhtml">
+
+    <ui:define name="content">
+    <p:panel id="contenPanel">
+
+    <h1>Deploy</h1>
+
+
+        WAR/EAR file:
+        <h:form>
+
+        <p:messages id="messages" globalOnly="false" showDetail="true"/>
+
+        <!-- <p:growl id="messages" showDetail="true"/> -->
+
+            <p:fileUpload
+                    fileUploadListener="#{fileUploadBean.handleFileUpload}"
+                    multiple="false"
+                    allowTypes="/(\.|\/)(war|ear)$/"
+                    sizeLimit="104857600"
+                    update="messages"/>
+        </h:form>
+    </p:panel>
+    </ui:define>
+
+</ui:composition>
+
+</h:body>
+
+</html>

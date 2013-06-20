@@ -57,8 +57,8 @@ public class MenuBean implements Serializable {
         submenu.setLabel("Menu 1");
         // menu items
         MenuItem item = new MenuItem();
-        item.setValue("Page 1");
-        item.setUrl("/pages/page1.xhtml");
+        item.setValue("Deploy");
+        item.setUrl("/pages/deploy.xhtml");
         //item.setActionExpression(expFact.createMethodExpression(elCtx, "#{menuBean.goToPage}", Void.class, new Class[0]));
         //item.setAjax(true);
         //item.setUpdate(":content");

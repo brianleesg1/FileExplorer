@@ -1,5 +1,7 @@
 package sg.com.ncs.backingBean;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -19,9 +21,11 @@ import java.util.TreeMap;
 @Scope("session")
 public class UserSettingsBean {
 
+    Logger log = LoggerFactory.getLogger(UserSettingsBean.class);
     private String theme = "aristo"; //default
     private Map<String,String> themes;
 
+    private int thresholdSize = 51200;
 
     @PostConstruct
     public void init() {
@@ -39,5 +43,12 @@ public class UserSettingsBean {
         return theme;
     }
 
+    public int getThresholdSize() {
+        log.info("thresholdSize = " + thresholdSize);
+        return thresholdSize;
+    }
 
+    public void setThresholdSize(int thresholdSize) {
+        this.thresholdSize = thresholdSize;
+    }
 }

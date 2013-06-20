@@ -46,6 +46,22 @@
         <servlet-name>Faces Servlet</servlet-name>
     </filter-mapping>
 
+    <filter>
+        <filter-name>PrimeFaces FileUpload Filter</filter-name>
+        <filter-class>org.primefaces.webapp.filter.FileUploadFilter</filter-class>
+
+        <init-param>
+            <!--Maximum file size in bytes to keep uploaded files in memory. If a file
+                exceeds this limit, it’ll be temporarily written to disk.-->
+            <param-name>thresholdSize</param-name>
+            <param-value>51200</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>PrimeFaces FileUpload Filter</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
+
     <listener>
             <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
     </listener>

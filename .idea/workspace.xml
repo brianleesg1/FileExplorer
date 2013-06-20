@@ -2,61 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5daf066-b4bb-4712-950b-e94b4a0f1341" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/index.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ant_ant_1_6_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__geronimo_spec_geronimo_spec_jta_1_0_1B_rc4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_annotation_1_0_spec_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_manager_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_model_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_descriptor_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_tools_api_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_profile_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_project_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_settings_2_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_provider_api_1_0_alpha_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_container_default_1_0_alpha_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_3_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_annotations_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_management_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_naming_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_plus_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jsp_2_1_glassfish_9_1_1_B51_25_p1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jsp_2_1_jetty_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jsp_api_2_1_glassfish_9_1_1_B51_25_p1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_maven_jetty_plugin_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_20081211.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_start_6_1_15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_primefaces_3_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_primefaces_themes_cupertino_1_0_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/content.xhtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileExplorer.iml" afterPath="$PROJECT_DIR$/FileExplorer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/FileExplorer_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FileExplorer_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/deploy.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/UserSessionInfo.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/UserSessionInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/application-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/commonLayout.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/commonLayout.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/footer.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/footer.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/header.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/layout/header.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/main.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/logout.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/logout.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FileExplorer.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/web.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371612258162" ignored="false" />
+    <file path="/web.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371703415260" ignored="false" />
     <file path="/jboss-web.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368065084559" ignored="false" />
     <file path="/index.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371530750297" ignored="false" />
     <file path="/Controller.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368070274742" ignored="false" />
@@ -74,7 +31,7 @@
     <file path="/ResourcesUtil.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371644825769" ignored="false" />
     <file path="/Resource.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371651334331" ignored="false" />
     <file path="/JSNode.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368523623115" ignored="false" />
-    <file path="/Dummy.txt" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371699514071" ignored="false" />
+    <file path="/Dummy.txt" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371699625537" ignored="false" />
     <file path="/jquery.ui.theme.css" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368086847686" ignored="false" />
     <file path="/Constants.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371112246573" ignored="false" />
     <file path="/LookUpTable.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368098764600" ignored="false" />
@@ -116,7 +73,7 @@
     <file path="/hello.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370658533909" ignored="false" />
     <file path="/LogoutBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370829950991" ignored="false" />
     <file path="/main.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371622321160" ignored="false" />
-    <file path="/logout.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371431494785" ignored="false" />
+    <file path="/logout.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371709802059" ignored="false" />
     <file path="/commonLayout.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371601597774" ignored="false" />
     <file path="/content.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371368826804" ignored="false" />
     <file path="/footer.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371623169282" ignored="false" />
@@ -365,13 +322,15 @@
     <file path="/UserSessionInfo.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371609021626" ignored="false" />
     <file path="/MenuBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371625272264" ignored="false" />
     <file path="/DashboardBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371530803675" ignored="false" />
-    <file path="/UserSettingsBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371521051651" ignored="false" />
+    <file path="/UserSettingsBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371702856658" ignored="false" />
     <file path="/page1.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371622950300" ignored="false" />
     <file path="/TestBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371609870171" ignored="false" />
     <file path="/page2.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371557157229" ignored="false" />
     <file path="/a.dummy" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371607516491" ignored="false" />
-    <file path="/filebrowser.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371697513425" ignored="false" />
+    <file path="/filebrowser.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371703472524" ignored="false" />
     <file path="/FileBrowserBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371699318456" ignored="false" />
+    <file path="/deploy.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371709280319" ignored="false" />
+    <file path="/FileUploadBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371711124736" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -437,66 +396,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="filebrowser.xhtml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="filebrowser.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="32" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-0.1487965">
+            <state line="15" column="45" selection-start="376" selection-end="441" vertical-scroll-proportion="-9.375">
               <folding>
-                <marker date="1371697516000" expanded="true" signature="1230:1241" placeholder="{...}" />
+                <marker date="1371703477000" expanded="true" signature="1228:1239" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="FileUploadBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="59" column="82" selection-start="1842" selection-end="1842" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="110" column="168" selection-start="3639" selection-end="3792" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileBrowserBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="203" column="54" selection-start="6881" selection-end="6881" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy-DEV.properties" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="deploy-DEV.properties" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/deploy/deploy-DEV.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="12" column="33" selection-start="395" selection-end="395" vertical-scroll-proportion="0.35019454">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java">
+      <file leaf-file-name="deploy.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/deploy.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="25" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+            <state line="27" column="26" selection-start="649" selection-end="649" vertical-scroll-proportion="-11.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application-context.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
+      <file leaf-file-name="logout.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/logout.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="61" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResourcesUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="34" selection-start="2199" selection-end="2208" vertical-scroll-proportion="0.0">
+            <state line="36" column="49" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-12.583333">
               <folding />
             </state>
           </provider>
@@ -505,26 +457,30 @@
       <file leaf-file-name="MainController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="24" selection-start="5307" selection-end="5313" vertical-scroll-proportion="0.0">
+            <state line="246" column="8" selection-start="8594" selection-end="9103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileType.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-vfs2/2.0/commons-vfs2-2.0.jar!/org/apache/commons/vfs2/FileType.class">
+      <file leaf-file-name="login.xhtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="20" selection-start="165" selection-end="173" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="36" column="4" selection-start="1051" selection-end="1087" vertical-scroll-proportion="-11.875">
+              <folding>
+                <marker date="1371546206000" expanded="true" signature="1269:1281" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
+      <file leaf-file-name="UserSettingsBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="36" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="68" selection-start="501" selection-end="562" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -547,22 +503,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/UserSessionInfo.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/common/layout/header.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/common/main.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/page1.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/common/layout/commonLayout.xhtml" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/common/layout/footer.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/TestBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ViewScope.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/common/logout.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/deploy.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java" />
       </list>
     </option>
   </component>
@@ -654,7 +610,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="956" />
+    <option name="height" value="955" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1040,6 +996,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ncs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fileexplorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1507,11 +1467,19 @@
       <created>1371473242014</created>
       <updated>1371473242014</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update with primefaces and spring security support">
+      <created>1371699576453</created>
+      <updated>1371699576453</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update with primefaces and spring security support">
+      <created>1371699632044</created>
+      <updated>1371699632044</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="956" extended-state="6" />
+    <frame x="0" y="22" width="1680" height="955" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1526,20 +1494,20 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.6722689" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969698" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.67030305" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.672956" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.20168068" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.6740042" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925338" sideWeight="0.6778043" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925338" sideWeight="0.6766467" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23194614" sideWeight="0.6778043" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3221957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23194614" sideWeight="0.6766467" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3233533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915967" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1618,53 +1586,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="17" selection-start="949" selection-end="949" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="420" selection-end="420" vertical-scroll-proportion="0.33202356">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/TestBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/ContentBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="65" selection-start="635" selection-end="691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ViewScope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="12" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/deploy/deploy-DEV.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="34" column="16" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.2988048">
           <folding />
         </state>
       </provider>
@@ -1676,61 +1600,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="25" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+        <state line="58" column="0" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-12.777778">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-context.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="61" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
+        <state line="35" column="63" selection-start="1003" selection-end="1056" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="36" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="24" selection-start="5307" selection-end="5313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-vfs2/2.0/commons-vfs2-2.0.jar!/org/apache/commons/vfs2/FileType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="165" selection-end="173" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="34" selection-start="2199" selection-end="2208" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="54" selection-start="6881" selection-end="6881" vertical-scroll-proportion="0.0">
+        <state line="245" column="45" selection-start="10191" selection-end="10204" vertical-scroll-proportion="-5.5416665">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="32" selection-start="1091" selection-end="1091" vertical-scroll-proportion="-0.1487965">
+        <state line="15" column="45" selection-start="376" selection-end="441" vertical-scroll-proportion="-9.375">
           <folding>
-            <marker date="1371697516000" expanded="true" signature="1230:1241" placeholder="{...}" />
+            <marker date="1371703477000" expanded="true" signature="1228:1239" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="68" selection-start="501" selection-end="562" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="426" selection-end="426" vertical-scroll-proportion="0.33197555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="4" selection-start="1051" selection-end="1087" vertical-scroll-proportion="-11.875">
+          <folding>
+            <marker date="1371546206000" expanded="true" signature="1269:1281" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/logout.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="49" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-12.583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="246" column="8" selection-start="8594" selection-end="9103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/deploy.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="26" selection-start="649" selection-end="649" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="110" column="168" selection-start="3639" selection-end="3792" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="82" selection-start="1842" selection-end="1842" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/deploy/deploy-SIT.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/deploy/deploy-DEV.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="33" selection-start="395" selection-end="395" vertical-scroll-proportion="0.35019454">
+          <folding />
         </state>
       </provider>
     </entry>
