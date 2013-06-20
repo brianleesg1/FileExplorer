@@ -7,13 +7,18 @@ import org.primefaces.component.separator.Separator;
 import org.primefaces.component.submenu.Submenu;
 import org.primefaces.model.DefaultMenuModel;
 import org.primefaces.model.MenuModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.el.ELContext;
 import javax.el.ExpressionFactory;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
 import java.io.Serializable;
 
 /**
@@ -28,8 +33,17 @@ import java.io.Serializable;
 @Scope("session")
 public class MenuBean implements Serializable {
 
+    Logger log = LoggerFactory.getLogger(MenuBean.class);
     private MenuModel model;
 
+    private String indexPage = "/pages/common/layout/index.xhtml";
+
+
+    private String page1 = "/pages/page1.xhtml";
+    private String page2 = "/pages/page2.xhtml";
+    private String page3 = "/pages/page3.xhtml";
+
+    private String currentPage = "page1";
     @PostConstruct
     protected void initialize() {
 
@@ -43,11 +57,16 @@ public class MenuBean implements Serializable {
         submenu.setLabel("Menu 1");
         // menu items
         MenuItem item = new MenuItem();
-        item.setValue("item 1");
-        //item.setUrl("http://jquery.com");
+        item.setValue("Page 1");
+        item.setUrl("/pages/page1.xhtml");
+        //item.setActionExpression(expFact.createMethodExpression(elCtx, "#{menuBean.goToPage}", Void.class, new Class[0]));
+        //item.setAjax(true);
+        //item.setUpdate(":content");
+        //item.setProcess(":displayForm");
         submenu.getChildren().add(item);
         item = new MenuItem();
-        item.setValue("item 2");
+        item.setValue("File Browser");
+        item.setUrl("/pages/filebrowser.xhtml");
         //item.setUrl("http://yuilibrary.com");
         submenu.getChildren().add(item);
 
@@ -70,9 +89,59 @@ public class MenuBean implements Serializable {
         logout.setActionExpression(expFact.createMethodExpression(elCtx, "#{logoutBean.logoutAction}", Void.class, new Class[0]));
         logout.setAjax(false);
         model.addMenuItem(logout);
+
     }
 
     public MenuModel getMenu() {
         return model;
     }
+
+    public String goToPage() {
+        log.info("goToPage");
+        currentPage = page2;
+        log.info("currentPage -> " + page2);
+        return currentPage;
+
+    }
+
+    public String getIndexPage() {
+        log.info("indexPage -> " + indexPage);
+        return indexPage;
+    }
+
+    public String getCurrentPage() {
+        log.info("getCurrentPage() -> " + currentPage);
+        return currentPage;
+    }
+
+    public void setCurrentPage(String currentPage) {
+        log.info("setCurrentPage() -> " + currentPage);
+        this.currentPage = currentPage;
+    }
+     /*
+    public String getPage1() {
+        return page1;
+    }
+
+    public String getPage2() {
+        return page2;
+    }
+
+    public String getPage3() {
+        return page3;
+    }
+       */
+    public String page2(ActionEvent e) {
+        log.info("page2 = "  + page2);
+        log.info("b4 currentPage = " + currentPage);
+        this.currentPage = page2;
+        log.info("af currentPage = " + currentPage);
+        return currentPage;
+    }
+
+    public String currentPage() {
+        log.info("currentPage - > " + currentPage);
+        return this.currentPage;
+    }
+
 }

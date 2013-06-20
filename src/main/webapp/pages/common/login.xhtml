@@ -38,7 +38,7 @@
     <div id="loginPanel">
     <f:view>
 
-    <h:form id="loginForm" prependId="false">
+    <h:form id="loginForm" prependId="false"> <!-- prependId='false' in order for spring security login to work -->
 
     <h:panelGrid style="width: 400px">
         <p:messages globalOnly="false" showDetail="false"/>
@@ -60,12 +60,10 @@
             <p:selectBooleanCheckbox id="storeUser" />
         </h:panelGrid>
         <f:facet name="footer">
-            <!--<h:commandButton type="submit" id="login" action="#{loginBean.loginAction}" value="Login" /> -->
             <p:commandButton type="submit" ajax="false" id="login" actionListener="#{loginBean.loginAction}" value="Login" />
         </f:facet>
     </p:panel>
     </h:form>
-
 
     </f:view>
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<body>
+<ui:composition>
+
+    <br/>
+
+    <table width="100%">
+    <h:form>
+
+
+    <p:dashboard id="board" model="#{dashboardBean.model}">
+    <p:ajax event="reorder" listener="#{dashboardBean.handleReorder}" />
+
+        <p:panel id="sports" header="Sports" style="margin: 10px" toggleable="true">
+            <p:feedReader value="http://rss.news.yahoo.com/rss/sports" var="feed" size="2">
+                <h:outputText value="#{feed.title}" style="font-weight: bold"/>
+                <br />
+                <h:outputText value="#{feed.description.value}" escape="false"/>
+                <p:separator />
+            </p:feedReader>
+        </p:panel>
+
+        <p:panel id="mot_news_release" header="Ministry of Transport &#60;br&#62; News Release" style="width:450px;margin: 10px"  toggleable="true">
+            <p:feedReader value="http://app.mot.gov.sg/rss.ashx?category=pr" var="feed" size="4">
+                <h:outputText value="#{feed.title}" style="font-weight: bold"/>
+                <br />
+                <h:outputText value="#{feed.description.value}" escape="false"/>
+                <p:separator />
+            </p:feedReader>
+        </p:panel>
+
+        <p:panel id="clock" header="Date/Time" style="margin:10px">
+            <p:clock pattern="dd/MM/yyyy HH:mm:ss " mode="server" />
+        </p:panel>
+
+        <p:panel id="traffic_news" header="Traffic News" style="margin:10px">
+            <p:feedReader value="http://www.livetraffic.sg/feeds/rss?m=true" var="feed" size="4">
+                <h:outputText value="#{feed.title}" style="font-weight: bold"/>
+                <br />
+                <h:outputText value="#{feed.description.value}" escape="false"/>
+                <p:separator />
+            </p:feedReader>
+        </p:panel>
+
+    </p:dashboard>
+
+    </h:form>
+    </table>
+
+
+</ui:composition>
+
+</body>
+</html>

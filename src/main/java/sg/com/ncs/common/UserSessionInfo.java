@@ -1,5 +1,7 @@
 package sg.com.ncs.common;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +21,7 @@ import java.io.Serializable;
 @Component
 @Scope("session")
 public class UserSessionInfo implements Serializable {
-
+    Logger log = LoggerFactory.getLogger(UserSessionInfo.class);
     String username;
 
     public UserSessionInfo() {
@@ -33,10 +35,12 @@ public class UserSessionInfo implements Serializable {
     }
 
     public String getUsername() {
+        log.info("getUsername -> " + username);
         return username;
     }
 
     public void setUsername(String username) {
+        log.info("setUsername -> " + username);
         this.username = username;
     }
 }

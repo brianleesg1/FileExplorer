@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/pages/common/layout/commonLayout.xhtml">
+
+        <ui:define name="content">
+            <p:panel id="contenPanel">
+
+                <div>
+                    File Browser
+                </div>
+
+                <h:form>
+                <p:contextMenu for="tree" nodeType="folder">
+                    <p:menuitem value="Refresh" update="tree" actionListener="#{fileBrowserBean.refreshFolder}" icon="ui-icon-arrowrefresh-1-e" />
+                </p:contextMenu>
+
+                <p:contextMenu for="tree" nodeType="file">
+                    <p:menuitem value="Download"  icon="ui-icon-arrowthick-1-s" ajax="false">
+                        <p:fileDownload value="#{fileBrowserBean.downloadfile}" />
+                    </p:menuitem>
+                </p:contextMenu>
+
+
+                <p:tree value="#{fileBrowserBean.root}"
+                        var="node" dynamic="true" cache="true" id="tree" style="width: 100%"
+                        selectionMode="single"
+                        selection="#{fileBrowserBean.selectedNode}">
+
+                    <p:ajax event="select"  listener="#{fileBrowserBean.onNodeSelect}" />
+                    <p:ajax event="expand" listener="#{fileBrowserBean.onNodeExpand}" />
+                    <p:ajax event="collapse" listener="#{fileBrowserBean.onNodeCollapse}" />
+
+                    <p:treeNode type="folder" expandedIcon="ui-icon ui-icon-folder-open" collapsedIcon="ui-icon ui-icon-folder-collapsed">
+                        <h:outputText value="#{node.name}"/>
+                    </p:treeNode>
+
+                    <p:treeNode type="file" icon="ui-icon ui-icon-document">
+                        <h:outputText value="#{node.name}"/>
+                    </p:treeNode>
+
+
+                </p:tree>
+
+                </h:form>
+
+            </p:panel>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

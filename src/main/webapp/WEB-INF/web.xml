@@ -23,7 +23,7 @@
 
     <context-param>
         <param-name>primefaces.THEME</param-name>
-        <param-value>aristo</param-value>
+        <param-value>#{userSettingsBean.theme}</param-value>
     </context-param>
 
     <filter>
@@ -45,6 +45,10 @@
         <filter-name>noCacheFilter</filter-name>
         <servlet-name>Faces Servlet</servlet-name>
     </filter-mapping>
+
+    <listener>
+            <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+    </listener>
 
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

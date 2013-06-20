@@ -125,4 +125,5 @@ public class LoginBean implements PhaseListener {
     public PhaseId getPhaseId() {
         return PhaseId.RENDER_RESPONSE;
     }
+
 }

@@ -6,53 +6,39 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
 <body>
 <ui:composition>
-
+<h:form>
 <table style="width: 100%">
     <tr>
-        <td></td>
-        <td style="text-align: right"> <h:outputLabel value="#{userSessionInfo.username}"/> </td>
+        <td width="85%">
+        </td>
+        <td width="10%">
+            <p:themeSwitcher style="width:165px" effect="fade">
+                <f:selectItem itemLabel="Choose Theme" itemValue=""/>
+                <f:selectItems value="#{userSettingsBean.themes}"/>
+            </p:themeSwitcher>
+        </td>
+        <td width="5%" style="text-align: right">
+            <h:outputLabel value="#{userSessionInfo.username}"/>
+        </td>
     </tr>
 
 </table>
-
-<!--
-<p:toolbar>
-<p:toolbarGroup align="left">
-
-    <p:menubar style="border: 0px">
-        <p:submenu label="Menu1">
-            <p:menuitem value="item1" url="#"/>
-            <p:menuitem value="item2" url="#"/>
-        </p:submenu>
-
-        <p:submenu label="Menu2">
-            <p:menuitem value="item1" url="#"/>
-            <p:menuitem value="item2" url="#"/>
-        </p:submenu>
-    </p:menubar>
-
-
-</p:toolbarGroup>
-
-<p:toolbarGroup align="right">
-
-    <h:form id="logoutForm">
-    <p:menubar style="border: 0px">
-
-        <p:menuitem ajax="false" actionListener="#{logoutBean.logoutAction}" value="Logout" icon="ui-icon-close"/>
-    </p:menubar>
 </h:form>
 
-</p:toolbarGroup>
 
 
-</p:toolbar>
- -->
 <h:form>
-<p:menubar model="#{menuBean.menu}"/>
+<p:menubar autoDisplay="false" model="#{menuBean.menu}"/>
 </h:form>
+
+
+
 
 </ui:composition>
 </body>

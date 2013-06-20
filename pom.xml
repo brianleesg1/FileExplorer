@@ -89,11 +89,20 @@
       <scope>test</scope>
     </dependency>
 
+        <!--
     <dependency>
       <groupId>org.mortbay.jetty</groupId>
       <artifactId>maven-jetty-plugin</artifactId>
       <version>6.1.15</version>
       <scope>test</scope>
+    </dependency>
+    -->
+
+    <dependency>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>8.1.11.v20130520</version>
+        <scope>test</scope>
     </dependency>
 
     <!-- @Inject JSR-330 -->
@@ -217,6 +226,12 @@
         <version>${extval.version}</version>
     </dependency>
 
+    <dependency>
+        <groupId>net.java.dev.rome</groupId>
+        <artifactId>rome</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+
      <dependency>
         <groupId>org.primefaces</groupId>
         <artifactId>primefaces</artifactId>
@@ -225,7 +240,12 @@
     <dependency>
         <groupId>org.primefaces.themes</groupId>
         <artifactId>cupertino</artifactId>
-        <version>1.0.8</version>
+        <version>1.0.10</version>
+    </dependency>
+    <dependency>
+        <groupId>org.primefaces.themes</groupId>
+        <artifactId>afterdark</artifactId>
+        <version>1.0.10</version>
     </dependency>
 
     </dependencies>
@@ -241,10 +261,23 @@
                 </configuration>
                 <version>2.4</version>
             </plugin>
+            <!--
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>6.1.15</version>
+                <configuration>
+                    <contextPath>/fe</contextPath>
+                    <scanIntervalSeconds>1</scanIntervalSeconds>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
+                </configuration>
+            </plugin>
+            -->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.0.3.v20130506</version>
                 <configuration>
                     <contextPath>/fe</contextPath>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
@@ -263,5 +296,13 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>prime-repo</id>
+            <name>PrimeFaces Maven Repository</name>
+            <url>http://repository.primefaces.org</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 
 </project>
