@@ -66,7 +66,6 @@ public class FileBrowserBean implements Serializable {
             log.info("DEPLOYMENT_TMP_ROOT = " + deployment_tmp_root);
             getNodes(deployment_tmp_root,false, root);
 
-            prepareRoot();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -93,6 +92,9 @@ public class FileBrowserBean implements Serializable {
                 case FOLDER : {
                     node.setType(FileType.FOLDER.toString());
                     node.setData(res);
+
+                    //get 1 more level due to Primefaces Tree
+                    getNodes(res.getPath(),true,node);
 
                     //node.setFileType(JSNode.FileTypes.FOLDER.name());
                     //node.closed();
@@ -142,19 +144,6 @@ public class FileBrowserBean implements Serializable {
         log.info("node = " + node.getName());
     }
 
-    private void prepareRoot() throws Exception {
-
-
-        log.info("no of nodes = " + root.getChildCount());
-
-        List<TreeNode> children = root.getChildren();
-        for (int i=0; i<children.size(); i++) {
-            DefaultTreeNode child = (DefaultTreeNode)children.get(i);
-            Resource res = (Resource)child.getData();
-            log.info("directory = " + res.getPath());
-            getNodes(res.getPath(),true,child);
-        }
-    }
 
     public TreeNode getSelectedNode() {
         return selectedNode;

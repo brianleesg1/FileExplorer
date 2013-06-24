@@ -21,7 +21,8 @@
         WAR/EAR file:
         <h:form>
 
-        <p:messages id="messages" globalOnly="false" showDetail="true"/>
+        <p:messages for="uploadStatus" showDetail="true"/>
+        <p:messages globalOnly="true" showDetail="false"/>
 
         <!-- <p:growl id="messages" showDetail="true"/> -->
 
@@ -30,7 +31,7 @@
                     multiple="false"
                     allowTypes="/(\.|\/)(war|ear)$/"
                     sizeLimit="104857600"
-                    update="messages"/>
+                    update="@form"/>
         </h:form>
     </p:panel>
     </ui:define>

@@ -7,7 +7,8 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-    <h:outputScript library="primefaces" name="jquery/jquery.js" />
+    <title></title>
+    <h:outputScript library="scripts" name="common.js" />
 </h:head>
 
 <h:body>
@@ -15,6 +16,8 @@
     <f:facet name="last">
         <h:outputStylesheet name="common-style.css" library="css"/>
     </f:facet>
+
+
 
     <div id="page">
 
@@ -24,9 +27,11 @@
             </ui:insert>
         </div>
 
+        <div id="content">
          <ui:insert name="content">
                 Sample content.
          </ui:insert>
+        </div>
 
         <div id="footer">
             <ui:insert name="footer" >

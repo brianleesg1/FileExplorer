@@ -9,10 +9,21 @@
 
 </h:head>
 <h:body>
-<ui:composition>
+<ui:composition template="/pages/common/layout/commonLayout.xhtml">
+
+    <ui:define name="content">
+    <p:panel id="contenPanel">
+
     <div>
         This is page 2
     </div>
+
+        <h:form>
+            <p:commandButton value="page3" action="page3"/>
+        </h:form>
+
+    </p:panel>
+    </ui:define>
 </ui:composition>
 </h:body>
 </html>

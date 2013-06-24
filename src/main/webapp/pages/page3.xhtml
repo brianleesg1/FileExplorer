@@ -9,10 +9,16 @@
 
 </h:head>
 <h:body>
-    <ui:composition>
+    <ui:composition template="/pages/common/layout/commonLayout.xhtml">
+
+        <ui:define name="content">
+        <p:panel id="contenPanel">
         <div>
             This is page 3
         </div>
+
+        </p:panel>
+        </ui:define>
     </ui:composition>
 </h:body>
 </html>

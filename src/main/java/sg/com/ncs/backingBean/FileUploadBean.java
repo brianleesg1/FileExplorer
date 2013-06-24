@@ -44,7 +44,7 @@ public class FileUploadBean {
 
 
             FacesMessage msg = new FacesMessage("Succesful", event.getFile().getFileName() + " is uploaded.");
-            FacesContext.getCurrentInstance().addMessage(null, msg);
+            FacesContext.getCurrentInstance().addMessage("uploadStatus", msg);
         } catch (Exception e) {
 
             FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_ERROR, "Deployment failed", e.getMessage()));

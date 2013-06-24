@@ -11,21 +11,43 @@
 
 </h:head>
 <body>
+
 <ui:composition>
+
+    <p:panel>
 <h:form>
 <table style="width: 100%">
+
     <tr>
         <td width="85%">
+            <h1>This is Header</h1>
         </td>
-        <td width="10%">
-            <p:themeSwitcher style="width:165px" effect="fade">
-                <f:selectItem itemLabel="Choose Theme" itemValue=""/>
-                <f:selectItems value="#{userSettingsBean.themes}"/>
-            </p:themeSwitcher>
+        <td width="15%">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <div id="textAdjuster">
+                            Text size
+                            <a style="text-decoration: none; color: #666;" href="#" onclick="javascript: adjustSize('+'); return false;">+</a> &nbsp;
+                            <a style="text-decoration: none; color: #666;" href="#" onclick="javascript: adjustSize('-'); return false;">-</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="90%">
+                        <p:themeSwitcher style="width:165px" effect="fade">
+                            <f:selectItem itemLabel="Choose Theme" itemValue=""/>
+                            <f:selectItems value="#{userSettingsBean.themes}"/>
+                        </p:themeSwitcher>
+                    </td>
+                    <td width="10%" style="text-align: right">
+                        <h:outputLabel value="#{userSessionInfo.username}"/>
+                    </td>
+                </tr>
+
+            </table>
         </td>
-        <td width="5%" style="text-align: right">
-            <h:outputLabel value="#{userSessionInfo.username}"/>
-        </td>
+
     </tr>
 
 </table>
@@ -38,7 +60,7 @@
 </h:form>
 
 
-
+    </p:panel>
 
 </ui:composition>
 </body>

@@ -2,14 +2,23 @@
     white-space: pre;
 }
 
-.ui-widget  {
-    font-size: 100% !important;
+.ui-widget {
+    font-size: 90%;
+}
+.ui-widget .ui-widget {
+    font-size: 100%;
 }
 
 /*important for dashboard columns to work!!*/
 .ui-dashboard-column {
     width:500px;
 }
+
+body,html{
+    height:100%;
+}
+
+
 
 
 

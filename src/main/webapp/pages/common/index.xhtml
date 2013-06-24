@@ -27,6 +27,7 @@
             </p:feedReader>
         </p:panel>
 
+
         <p:panel id="mot_news_release" header="Ministry of Transport &#60;br&#62; News Release" style="width:450px;margin: 10px"  toggleable="true">
             <p:feedReader value="http://app.mot.gov.sg/rss.ashx?category=pr" var="feed" size="4">
                 <h:outputText value="#{feed.title}" style="font-weight: bold"/>
@@ -39,6 +40,7 @@
         <p:panel id="clock" header="Date/Time" style="margin:10px">
             <p:clock pattern="dd/MM/yyyy HH:mm:ss " mode="server" />
         </p:panel>
+
 
         <p:panel id="traffic_news" header="Traffic News" style="margin:10px">
             <p:feedReader value="http://www.livetraffic.sg/feeds/rss?m=true" var="feed" size="4">
