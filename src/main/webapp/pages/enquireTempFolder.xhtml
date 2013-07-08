@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+    <ui:composition template="/pages/common/layout/commonLayout.xhtml">
+
+        <ui:define name="content">
+            <p:panel id="contenPanel">
+
+                <h1>Enquire Temp Folder</h1>
+
+                <h:panelGrid columns="2">
+                    <p:outputLabel id="submissionNoLabel" value="Submission No:"/>
+                    <p:autoComplete id="submissionNo" value="#{enquireTempFolderBean.submissionNo}" completeMethod="#{enquireTempFolderBean.complete}"/>
+                </h:panelGrid>
+
+            </p:panel>
+        </ui:define>
+
+    </ui:composition>
+
+</h:body>
+
+</html>

@@ -38,15 +38,15 @@ import java.util.TreeMap;
  * NOTES ON SECURITY <BR>
  * ================= <BR>
  * This class uses Computer Name + Class Loading Time + Another random number as the seed for
- * generation. For security reason, the seed generation algo + the pseudo random number 
+ * generation. For sg.com.ncs.security reason, the seed generation algo + the pseudo random number
  * generation algorithm should be kept a secret. The class uses Secure Hash Algorithm-1 
  * (SHA-1) for generating random number SHA-1 (with 160 bit) is more secure than SHA and MD5 
  * (128 bit) <BR><BR>
  * NOTES ON SPEED<BR>
  * ================= <BR>
  * The default provider from Java is slower. However, third party providers has other 
- * implications including licensing and security issues. For this reason, developer should 
- * weigh the different issues before deciding on the security provider.<BR><BR>
+ * implications including licensing and sg.com.ncs.security issues. For this reason, developer should
+ * weigh the different issues before deciding on the sg.com.ncs.security provider.<BR><BR>
  *
  * Additional method:<BR>
  * ==================<BR>

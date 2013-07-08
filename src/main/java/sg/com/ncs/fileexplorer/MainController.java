@@ -43,7 +43,7 @@ public class MainController {
 
         ModelAndView model = new ModelAndView("index");
         model.addObject("max_file_upload_size", Integer.parseInt(SystemProperties.getProperty("MAX_UPLOAD_FILE_SIZE"))/1024/1024);
-
+        model.addObject("max_file_name_length", Integer.parseInt(SystemProperties.getProperty("MAX_FILE_NAME_LENGTH")));
         log.info(test);
         return model;
     }

@@ -116,7 +116,9 @@ public class LoginBean implements PhaseListener {
             FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_ERROR,MessageUtil.getMessage("login.exceed.maximum"), e.getMessage()));
         }
         else if (e != null) {
-            e.printStackTrace();;
+            e.printStackTrace();
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put(WebAttributes.AUTHENTICATION_EXCEPTION, null);
+            FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_ERROR, MessageUtil.getMessage("login.failed"), e.getMessage()));
         }
 
     }

@@ -4,6 +4,8 @@ import org.apache.commons.vfs2.FileName;
 import org.apache.commons.vfs2.FileType;
 
 import java.io.Serializable;
+import java.math.BigInteger;
+import java.util.Date;
 
 
 public class Resource implements Serializable{
@@ -11,13 +13,16 @@ public class Resource implements Serializable{
     //private FileName filename;
     private String fullPathName;
     private String name;
+    private long size;
+    private Date lastModifiedTime;
+
     private FileType type;
     private String id;
     private String extension;
     private String path;
 
 
-    public Resource(FileName filename, FileType type) {
+    public Resource(FileName filename, FileType type, long size, long lastModifiedTime) {
         //this.filename = filename;
         this.type = type;
         this.fullPathName = filename.toString();
@@ -26,6 +31,10 @@ public class Resource implements Serializable{
         this.id = SystemUtil.getSystemId();
         this.extension = filename.getExtension();
         this.path = filename.getPath();
+
+        this.size = size;
+        this.lastModifiedTime = new Date(lastModifiedTime);
+
     }
 
     public String getName() {
@@ -52,4 +61,19 @@ public class Resource implements Serializable{
         return this.path;
     }
 
+    public long getSize() {
+        return size;
+    }
+
+    public void setSize(long size) {
+        this.size = size;
+    }
+
+    public Date getLastModifiedTime() {
+        return lastModifiedTime;
+    }
+
+    public void setLastModifiedTime(Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
 }

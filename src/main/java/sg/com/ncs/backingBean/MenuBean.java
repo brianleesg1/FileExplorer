@@ -43,6 +43,9 @@ public class MenuBean implements Serializable {
     private String page2 = "/pages/page2.xhtml";
     private String page3 = "/pages/page3.xhtml";
 
+    private String temp_folder_enquiry_page = "/pages/temp_folder_enquiry.xhtml";
+
+
     private String currentPage = "page1";
     @PostConstruct
     protected void initialize() {
@@ -69,6 +72,21 @@ public class MenuBean implements Serializable {
         item.setUrl("/pages/filebrowser.xhtml");
         //item.setUrl("http://yuilibrary.com");
         submenu.getChildren().add(item);
+
+        Submenu enquiryMenu = new Submenu();
+        enquiryMenu.setLabel("Enquiry");
+
+        item = new MenuItem();
+        item.setValue("Temp Folder");
+        item.setUrl("/pages/enquireTempFolder.xhtml");
+        enquiryMenu.getChildren().add(item);
+
+        item = new MenuItem();
+        item.setValue("Perm Folder");
+        item.setUrl("/pages/enquirePermFolder.xhtml");
+        enquiryMenu.getChildren().add(item);
+
+        submenu.getChildren().add(enquiryMenu);
 
         model.addSubmenu(submenu);
 

@@ -33,10 +33,10 @@ public class DashboardBean implements Serializable {
         DashboardColumn column3 = new DefaultDashboardColumn();
 
         column3.addWidget("clock");
-        column3.addWidget("traffic_news");
-        column1.addWidget("mot_news_release");
+        //column3.addWidget("traffic_news");
+        //column1.addWidget("mot_news_release");
 
-        column2.addWidget("sports");
+        //column2.addWidget("sports");
 
 
         model.addColumn(column1);

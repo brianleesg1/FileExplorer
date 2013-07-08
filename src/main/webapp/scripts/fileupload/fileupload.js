@@ -15,6 +15,13 @@ vitas.fileupload = function(options) {
         this.max_file_upload_size = 50;//default
 
     }
+
+    if (typeof options.max_file_name_length != "undefined") {
+        this.max_file_name_length = options.max_file_name_length;
+    }
+    else {
+        this.max_file_name_length = 33;//default
+    }
 }
 
 vitas.fileupload.prototype.callback = function(msg) {
@@ -63,20 +70,28 @@ vitas.fileupload.prototype.initContainer = function (containername, filters) {
 
     uploader.bind('FilesAdded', function(up, files) {
         $.each(files, function(i, file) {
-            $('#'+containername + ' .filelist').append('<div id="' + file.id + '">' + '<span class="fileselect"><input type="checkbox" name="first" value="cg"/></span> <label class="filename">' + file.name + ' (' + plupload.formatSize(file.size) + ')</label>' + '<label class="filestatus">Selected</label></div>');
 
-            $('#'+containername + ' .deletefiles').click(function(e) {
+            if (file.name.length > uploadcontainer.max_file_name_length) {
+                $('#'+containername + ' .filelist').append("<div><span class='fileselect'></span> <label class='filename'>" + file.name + " </label>" + "<label class='fileerror'>" + file.name + " exceed " + uploadcontainer.max_file_name_length + " chars</label></div>");
+                uploader.removeFile(file);
+            }
+            else {
 
-                $('#'+file.id+ ' .fileselect :checkbox:checked').each(function() {
-                    e.preventDefault();
-                    common.log("delete " + file.name);
-                    uploader.removeFile(file);
-                    $('#' + file.id).remove();
-                    up.refresh(); // Reposition Flash/Silverlight
+                $('#'+containername + ' .filelist').append('<div id="' + file.id + '">' + '<span class="fileselect"><input type="checkbox" name="first" value="cg"/></span> <label class="filename">' + file.name + ' (' + plupload.formatSize(file.size) + ')</label>' + '<label class="filestatus">Selected</label></div>');
+
+                $('#'+containername + ' .deletefiles').click(function(e) {
+
+                    $('#'+file.id+ ' .fileselect :checkbox:checked').each(function() {
+                        e.preventDefault();
+                        common.log("delete " + file.name);
+                        uploader.removeFile(file);
+                        $('#' + file.id).remove();
+                        up.refresh(); // Reposition Flash/Silverlight
+                    });
+
+
                 });
-
-
-            });
+            }
 
         });
         up.refresh(); // Reposition Flash/Silverlight

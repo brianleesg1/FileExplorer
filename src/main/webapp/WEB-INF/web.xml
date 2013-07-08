@@ -111,5 +111,9 @@
         <exception-type>java.lang.Exception</exception-type>
         <location>/WEB-INF/views/error.jsp</location>
     </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/pages/common/main.xhtml</location>
+    </error-page>
 
 </web-app>

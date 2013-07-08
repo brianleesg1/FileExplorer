@@ -45,7 +45,11 @@
                     </p:treeNode>
 
                     <p:treeNode type="file" icon="ui-icon ui-icon-document">
-                        <h:outputText value="#{node.name}"/>
+                       <h:panelGrid columns="3" cellpadding="0" columnClasses="c1,c2,c3">
+                            <h:outputText value="#{node.name}"/>
+                            <h:outputText value="#{node.size}"/>
+                            <h:outputText value="#{node.lastModifiedTime}"/>
+                       </h:panelGrid>
                     </p:treeNode>
 
 

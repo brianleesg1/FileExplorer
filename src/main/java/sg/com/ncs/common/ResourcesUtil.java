@@ -21,7 +21,7 @@ public class ResourcesUtil {
         FileObject fo = fsManager.resolveFile(directory);
 
         if (!children_only) {
-            Resource resource = new Resource(fo.getName(), fo.getType());
+            Resource resource = new Resource(fo.getName(), fo.getType(), 0 , fo.getContent().getLastModifiedTime());
             resources.add(resource);
         } else {
 
@@ -34,8 +34,14 @@ public class ResourcesUtil {
                     FileObject child = children[i];
                     log.error("filename = " + child.getName() + " , type = " + child.getType().getName());
 
-                    Resource resource = new Resource(child.getName(), child.getType());
-                    resources.add(resource);
+                    if (child.getType().compareTo(FileType.FILE) == 0) {
+                        Resource resource = new Resource(child.getName(), child.getType(), child.getContent().getSize(), child.getContent().getLastModifiedTime());
+                        resources.add(resource);
+                    }
+                    else {
+                        Resource resource = new Resource(child.getName(), child.getType(), 0, child.getContent().getLastModifiedTime());
+                        resources.add(resource);
+                    }
                 }
             }
         }

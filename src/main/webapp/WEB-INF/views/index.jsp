@@ -40,7 +40,7 @@
              }
 
             //commend
-            var url = "<acl:junction/><%=request.getContextPath()%>/downloadfile?filename=" + id;
+            var url = "<acl:junction/><%=request.getContextPath()%>/rs/downloadfile?filename=" + id;
             log("url = " + url);
 
 
@@ -174,12 +174,14 @@
             });
 
             var max_file_upload_size = ${max_file_upload_size};
+            var max_file_name_length = ${max_file_name_length};
 
             var uploader = new vitas.fileupload( {
                 flash_swf_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.flash.swf',
                 silverlight_xap_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.silverlight.xap',
-                upload_url : '<%=request.getContextPath()%>/deploy',
-                max_file_upload_size : max_file_upload_size
+                upload_url : '<%=request.getContextPath()%>/rs/deploy',
+                max_file_upload_size : max_file_upload_size,
+                max_file_name_length : max_file_name_length
             });
 
             uploader.initContainer("ApplicationDeployment", [ { extensions : "war,ear" } ]);
@@ -187,7 +189,7 @@
             var uploadtest = new vitas.fileupload( {
                 flash_swf_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.flash.swf',
                 silverlight_xap_url : '<%=request.getContextPath()%>/scripts/plupload-1.5.6/plupload.silverlight.xap',
-                upload_url : '<%=request.getContextPath()%>/upload',
+                upload_url : '<%=request.getContextPath()%>/rs/upload',
                 max_file_upload_size : max_file_upload_size
             });
 
