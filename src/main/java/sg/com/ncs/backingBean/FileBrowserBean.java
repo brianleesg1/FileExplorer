@@ -36,11 +36,9 @@ import java.util.List;
 
 @Component
 @Scope("view")
-public class FileBrowserBean implements Serializable {
+public class FileBrowserBean extends BaseBackingBean {
 
     private DefaultTreeNode root;
-    Logger log = LoggerFactory.getLogger(FileBrowserBean.class);
-
     private TreeNode selectedNode;
 
     private StreamedContent downloadfile;

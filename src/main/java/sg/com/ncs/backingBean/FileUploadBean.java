@@ -27,10 +27,7 @@ import java.io.InputStream;
  */
 @Component
 @Scope("request")
-public class FileUploadBean {
-    Logger log = LoggerFactory.getLogger(FileUploadBean.class);
-
-
+public class FileUploadBean extends BaseBackingBean {
 
     public void handleFileUpload(FileUploadEvent event) {
         log.info("handleFileUpload");

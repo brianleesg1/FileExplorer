@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5daf066-b4bb-4712-950b-e94b4a0f1341" name="Default" comment="update with primefaces and spring security support">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/enquirePermFolder.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/pages/enquireTempFolder.xhtml" />
+    <list default="true" id="a5daf066-b4bb-4712-950b-e94b4a0f1341" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/BaseBackingBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/ContentBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/ContentBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/DashboardBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/DashboardBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LogoutBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LogoutBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/RandomGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/RandomGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/application-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-security.xml" afterPath="$PROJECT_DIR$/src/main/resources/application-security.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/deploy/deploy-DEV.properties" afterPath="$PROJECT_DIR$/src/main/resources/deploy/deploy-DEV.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/TestBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/TestBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java" afterPath="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/deploy/deploy-SIT.properties" afterPath="$PROJECT_DIR$/src/main/resources/deploy/deploy-SIT.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/scripts/fileupload/fileupload.js" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/fileupload/fileupload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,23 +30,23 @@
     <file path="/SystemProperties.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368080971889" ignored="false" />
     <file path="/Crypto.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368078039601" ignored="false" />
     <file path="/StringUtil.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368078949945" ignored="false" />
-    <file path="/pom.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371615208066" ignored="false" />
+    <file path="/pom.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373534512106" ignored="false" />
     <file path="/application-context.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371650591470" ignored="false" />
     <file path="/CustomPropertyPlaceholder.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368079722053" ignored="false" />
     <file path="/fragment.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370845018044" ignored="false" />
     <file path="/deploy-DEV.properties" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1369276832279" ignored="false" />
     <file path="/MainController.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1372399235445" ignored="false" />
-    <file path="/ResourcesUtil.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373273347678" ignored="false" />
-    <file path="/Resource.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373273078953" ignored="false" />
+    <file path="/ResourcesUtil.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373362774167" ignored="false" />
+    <file path="/Resource.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373533273512" ignored="false" />
     <file path="/JSNode.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368523623115" ignored="false" />
-    <file path="/Dummy.txt" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373272624620" ignored="false" />
+    <file path="/Dummy.txt" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797692039" ignored="false" />
     <file path="/jquery.ui.theme.css" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368086847686" ignored="false" />
     <file path="/Constants.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371112246573" ignored="false" />
     <file path="/LookUpTable.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368098764600" ignored="false" />
     <file path="/SystemUtil.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368097885836" ignored="false" />
     <file path="/DateUtil.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371113107160" ignored="false" />
     <file path="/RandomGenerator.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368097990648" ignored="false" />
-    <file path="/deploy-SIT.properties" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1369013863032" ignored="false" />
+    <file path="/deploy-SIT.properties" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373534965894" ignored="false" />
     <file path="/fileupload.js" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1372399656776" ignored="false" />
     <file path="$PROJECT_DIR$/../pluploadDemo/src/main/webapp/scripts/fileupload/fileupload.js" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368932731145" ignored="false" />
     <file path="$PROJECT_DIR$/../pluploadDemo/src/main/java/sg/com/ncs/demo/HomeController.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1368929887540" ignored="false" />
@@ -81,10 +76,10 @@
     <file path="/invalidSession.jsp" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370583297187" ignored="false" />
     <file path="/logout.jsp" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370583578066" ignored="false" />
     <file path="/login.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371546203225" ignored="false" />
-    <file path="/LoginBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1372067578263" ignored="false" />
+    <file path="/LoginBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797912093" ignored="false" />
     <file path="$PROJECT_DIR$/../RestEasyDemo/src/main/webapp/WEB-INF/jsf/hello.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370658539418" ignored="false" />
     <file path="/hello.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370658533909" ignored="false" />
-    <file path="/LogoutBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1370829950991" ignored="false" />
+    <file path="/LogoutBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797924486" ignored="false" />
     <file path="/main.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371622321160" ignored="false" />
     <file path="/logout.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371709802059" ignored="false" />
     <file path="/commonLayout.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371777763551" ignored="false" />
@@ -93,7 +88,7 @@
     <file path="/header.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371721685076" ignored="false" />
     <file path="/faces-config.xml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371430108893" ignored="false" />
     <file path="/NoCacheFilter.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371005277652" ignored="false" />
-    <file path="/ContentBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371171742873" ignored="false" />
+    <file path="/ContentBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797788174" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/application-client_1_4.xsd" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371123645461" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/application-client_6.xsd" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371123645461" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/ejb-jar_3_1.xsd" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371123645461" ignored="false" />
@@ -333,24 +328,25 @@
     <file path="/common-style.css" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373275309561" ignored="false" />
     <file path="/messages.properties" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371451189289" ignored="false" />
     <file path="/UserSessionInfo.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371609021626" ignored="false" />
-    <file path="/MenuBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373011816002" ignored="false" />
-    <file path="/DashboardBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371530803675" ignored="false" />
-    <file path="/UserSettingsBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371702856658" ignored="false" />
+    <file path="/MenuBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797937166" ignored="false" />
+    <file path="/DashboardBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797822088" ignored="false" />
+    <file path="/UserSettingsBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797963717" ignored="false" />
     <file path="/page1.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371802669567" ignored="false" />
-    <file path="/TestBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371609870171" ignored="false" />
+    <file path="/TestBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797952678" ignored="false" />
     <file path="/page2.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371803415044" ignored="false" />
     <file path="/a.dummy" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371607516491" ignored="false" />
     <file path="/filebrowser.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373275227175" ignored="false" />
-    <file path="/FileBrowserBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371776144857" ignored="false" />
+    <file path="/FileBrowserBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797874112" ignored="false" />
     <file path="/deploy.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371716847738" ignored="false" />
-    <file path="/FileUploadBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371711124736" ignored="false" />
+    <file path="/FileUploadBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797897505" ignored="false" />
     <file path="/common.js" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371807623673" ignored="false" />
     <file path="/page3.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1371803504199" ignored="false" />
     <file path="/UserDetailService.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1372067297062" ignored="false" />
     <file path="/CustomAuthenticationProvider.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1372067110192" ignored="false" />
     <file path="/enquireTempFolder.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373012600375" ignored="false" />
     <file path="/enquirePermFolder.xhtml" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373011934757" ignored="false" />
-    <file path="/EnquireTempFolderBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373014114418" ignored="false" />
+    <file path="/EnquireTempFolderBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797855035" ignored="false" />
+    <file path="/BaseBackingBean.java" changelist="a5daf066-b4bb-4712-950b-e94b4a0f1341" time="1373797802333" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -370,7 +366,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -407,6 +402,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -416,75 +412,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileUploadBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="52" selection-start="1109" selection-end="1138" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="59" selection-start="1003" selection-end="1056" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enquireTempFolder.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/enquireTempFolder.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="106" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnquireTempFolderBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="61" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resource.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Resource.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="47" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileBrowserBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="33" selection-start="1315" selection-end="1327" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filebrowser.xhtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="13" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.41935483">
-              <folding>
-                <marker date="1373275240000" expanded="true" signature="1228:1239" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common-style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="16" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+            <state line="54" column="49" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.40149626">
               <folding />
             </state>
           </provider>
@@ -493,19 +424,17 @@
       <file leaf-file-name="ResourcesUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="61" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.0">
+            <state line="14" column="44" selection-start="350" selection-end="361" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="45" selection-start="1450" selection-end="1483" vertical-scroll-proportion="-4.75">
-              <folding>
-                <marker date="1372052446000" expanded="true" signature="1280:1292" placeholder="{...}" />
-              </folding>
+            <state line="25" column="54" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -528,22 +457,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/security/UserDetailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/DashboardBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/deploy/deploy-SIT.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/deploy/deploy-DEV.properties" />
-        <option value="$PROJECT_DIR$/src/main/webapp/scripts/fileupload/fileupload.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/enquirePermFolder.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/enquireTempFolder.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" />
         <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/deploy/deploy-SIT.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/ContentBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/DashboardBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/BaseBackingBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LogoutBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/TestBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java" />
       </list>
     </option>
   </component>
@@ -564,6 +493,10 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="FileExplorer Maven Webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -635,7 +568,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="958" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -663,8 +596,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -824,36 +755,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FileExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FileExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1057,6 +958,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1475,11 +1378,19 @@
       <created>1372051564593</created>
       <updated>1372051564593</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update with primefaces and spring security support">
+      <created>1373276600226</created>
+      <updated>1373276600227</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update with primefaces and spring security support">
+      <created>1373276640732</created>
+      <updated>1373276640732</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="958" extended-state="0" />
+    <frame x="0" y="22" width="1680" height="948" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1498,11 +1409,11 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.20168068" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.6740042" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925338" sideWeight="0.6857143" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925338" sideWeight="0.68561065" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23194614" sideWeight="0.6857143" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31428573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23194614" sideWeight="0.68561065" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31438935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1586,126 +1497,126 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="62" selection-start="8791" selection-end="8791" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="179" selection-start="9515" selection-end="9515" vertical-scroll-proportion="0.64524424" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/fileexplorer/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="64" selection-start="7061" selection-end="7061" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="105" selection-start="3856" selection-end="3856" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="20" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/deploy.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/deploy/deploy-SIT.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="17" selection-start="962" selection-end="1028" vertical-scroll-proportion="-15.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/enquirePermFolder.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="59" selection-start="1003" selection-end="1056" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="52" selection-start="1109" selection-end="1138" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/enquireTempFolder.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="106" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="61" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="33" selection-start="1315" selection-end="1327" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
+        <state line="16" column="20" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/ResourcesUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="61" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.0">
+        <state line="14" column="44" selection-start="350" selection-end="361" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/login.xhtml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="45" selection-start="1450" selection-end="1483" vertical-scroll-proportion="-4.75">
-          <folding>
-            <marker date="1372052446000" expanded="true" signature="1280:1292" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/common-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="16" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+        <state line="25" column="54" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/filebrowser.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/ContentBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.41935483">
+        <state line="22" column="50" selection-start="653" selection-end="653" vertical-scroll-proportion="0.26957637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/DashboardBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="50" selection-start="728" selection-end="728" vertical-scroll-proportion="0.27415144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/EnquireTempFolderBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="703" selection-end="703" vertical-scroll-proportion="0.34320322">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/BaseBackingBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="47" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1373275240000" expanded="true" signature="1228:1239" placeholder="{...}" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileBrowserBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="33" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.31331593">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/LogoutBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="3" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/MenuBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/UserSettingsBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.29761904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/TestBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="47" selection-start="500" selection-end="500" vertical-scroll-proportion="0.26184538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/backingBean/FileUploadBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="3" selection-start="836" selection-end="836" vertical-scroll-proportion="0.2851711">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sg/com/ncs/common/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="49" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.40149626">
+          <folding />
         </state>
       </provider>
     </entry>

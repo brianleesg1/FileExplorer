@@ -22,8 +22,8 @@ import java.io.IOException;
  */
 @Component
 @Scope("request")
-public class LogoutBean {
-    Logger log = LoggerFactory.getLogger(LogoutBean.class);
+public class LogoutBean extends BaseBackingBean {
+
 
     public String logoutAction() throws IOException, ServletException {
         log.info("logoutAction");

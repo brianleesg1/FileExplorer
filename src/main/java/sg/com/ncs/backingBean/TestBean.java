@@ -18,8 +18,7 @@ import javax.faces.bean.SessionScoped;
 
 @Component
 @Scope("session")
-public class TestBean {
-    Logger log = LoggerFactory.getLogger(TestBean.class);
+public class TestBean extends BaseBackingBean {
 
     private int value = 0;
 

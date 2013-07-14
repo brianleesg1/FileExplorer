@@ -21,11 +21,10 @@ import java.util.List;
  */
 @Component
 @Scope("request")
-public class EnquireTempFolderBean {
+public class EnquireTempFolderBean extends BaseBackingBean {
 
     private String upload_file_tmp_root = SystemProperties.getProperty("UPLOAD_FILE_TMP_ROOT");
 
-    Logger log = LoggerFactory.getLogger(EnquireTempFolderBean.class);
     private String submissionNo;
 
     public String getSubmissionNo() {

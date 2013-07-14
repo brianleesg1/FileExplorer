@@ -31,9 +31,8 @@ import java.io.Serializable;
 
 @Component
 @Scope("session")
-public class MenuBean implements Serializable {
+public class MenuBean extends BaseBackingBean {
 
-    Logger log = LoggerFactory.getLogger(MenuBean.class);
     private MenuModel model;
 
     private String indexPage = "/pages/common/layout/index.xhtml";

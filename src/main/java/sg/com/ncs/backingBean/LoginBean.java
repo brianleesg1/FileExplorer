@@ -40,9 +40,8 @@ import java.io.IOException;
 
 @Component
 @Scope("request")
-public class LoginBean implements PhaseListener {
+public class LoginBean extends BaseBackingBean implements PhaseListener {
 
-    Logger log = LoggerFactory.getLogger(LoginBean.class);
     @Required
     private String j_username;
     @Required

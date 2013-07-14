@@ -22,7 +22,7 @@ import java.io.Serializable;
 
 @Component
 @Scope("session")
-public class DashboardBean implements Serializable {
+public class DashboardBean extends BaseBackingBean {
     private DashboardModel model;
 
     public DashboardBean() {

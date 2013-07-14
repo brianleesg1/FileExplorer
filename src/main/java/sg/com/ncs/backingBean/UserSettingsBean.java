@@ -19,9 +19,8 @@ import java.util.TreeMap;
 
 @Component
 @Scope("session")
-public class UserSettingsBean {
+public class UserSettingsBean extends BaseBackingBean {
 
-    Logger log = LoggerFactory.getLogger(UserSettingsBean.class);
     private String theme = "aristo"; //default
     private Map<String,String> themes;
 

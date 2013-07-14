@@ -29,10 +29,10 @@ public class ResourcesUtil {
 
                 FileObject[] children = fo.getChildren();
 
-                log.error("no of children = " + children.length);
+                log.info("no of children = " + children.length);
                 for (int i=0; i<children.length; i++) {
                     FileObject child = children[i];
-                    log.error("filename = " + child.getName() + " , type = " + child.getType().getName());
+                    //log.error("filename = " + child.getName() + " , type = " + child.getType().getName());
 
                     if (child.getType().compareTo(FileType.FILE) == 0) {
                         Resource resource = new Resource(child.getName(), child.getType(), child.getContent().getSize(), child.getContent().getLastModifiedTime());

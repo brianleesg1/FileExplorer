@@ -20,9 +20,7 @@ import java.util.Date;
 @Component
 @ManagedBean
 @Scope("request")
-public class ContentBean {
-
-    Logger log = LoggerFactory.getLogger(ContentBean.class);
+public class ContentBean extends BaseBackingBean {
 
     @DateIs(type = DateIsType.after, valueOf = "#{dateUtil.currentDate}")
     private Date valueDate;

@@ -30,7 +30,8 @@ public class Resource implements Serializable{
         //this.id = ResourcesUtil.encode(filename.toString());
         this.id = SystemUtil.getSystemId();
         this.extension = filename.getExtension();
-        this.path = filename.getPath();
+        //this.path = filename.getPath();
+        this.path = filename.toString();
 
         this.size = size;
         this.lastModifiedTime = new Date(lastModifiedTime);
